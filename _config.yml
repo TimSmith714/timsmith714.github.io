@@ -95,9 +95,6 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 
-# google analytics
-google_analytics: UA-46783401-10
-
 # Choose what to show ( can be true or false)
 show_author_work_experiences: true
 show_author_education_details: true
@@ -145,8 +142,6 @@ defaults:
       permalink: /:path/:basename:output_ext
 
 # Build settings
-
-theme: devlopr
 plugins:
   - jekyll-feed
   - jekyll-paginate
