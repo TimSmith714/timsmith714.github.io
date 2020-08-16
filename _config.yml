@@ -7,14 +7,15 @@ url: "" # the base hostname & protocol for your site, e.g. https://example.githu
 baseurl: "" # the subpath of your site, e.g. /blog
 
 urls:
-    - text: About Me
-      url: /about
+#    - text: About Me
+#      url: /about
     - text: Blog
       url: /blog
-    - text: Gallery
-      url: /gallery
-    - text: Shop
-      url : /shop
+# Disabling Gallery for the moment - I'm not a photographer. May come back with something another time
+#    - text: Gallery
+#      url: /gallery
+#    - text: Shop
+#      url : /shop
     - text: Contact Me
       url : /contact
     - text: Styleguide
@@ -26,7 +27,7 @@ urls:
 
 author_logo: profile.png
 author: Tim Smith
-author_bio: My name is John Doe. Once a journalist of sorts and now a coder of sorts. I also love music and medieval poetry.
+author_bio: My name is Tim Smith. Once a journalist of sorts and now a coder of sorts. I also love music and medieval poetry.
 author_email: "web_contact@aw7.uk"
 author_location: UK
 author_website_url: "http://timsmith714.github.io"
@@ -36,21 +37,21 @@ author_work_experiences:
               company_logo: google.png
               company_url: https://www.arunestates.co.uk
               designation: Senior Developer
-              description: Worked on website and various in house tools
+              description: I manage the various websites and work on in house tools. I focus on Azure
               visibility: true
             - company_name: Computeractive
               company_logo: microsoft.png
               company_url: https://www.computeractive.co.uk
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
+              designation: Workshops Editor
+              description: Wrote and edited the Workshops section of the magazine. During my time on the magazine I also wrote, presented and edited videos, managed the forums. Known as the 'Technical heart' of the magazine
               visibility: true
 
 author_education_details:
-              - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
+              - college_logo: 
+                college_name: University of Kent
+                college_url: https://www.kent.ac.uk/
+                college_degree: BA (hons) in History
+                description: Upper 2nd class degree. 
                 visibility: true
 
 author_project_details:
@@ -66,28 +67,28 @@ author_project_details:
                 visibility: true
 
 # social links
-twitter_username: johndoe
-github_username:  johndoe
-facebook_username: johndoe
-linkedin_username: johndoe
-behance_username: johndoe
-instagram_username: johndoe
-medium_username: johndoe
-telegram_username: johndoe
-dribbble_username: johndoe
+twitter_username: tr_smith
+github_username:  TimSmith714
+facebook_username: 
+linkedin_username: timothyrichardsmith
+behance_username: 
+instagram_username: the_aardwolf
+medium_username: 
+telegram_username: 
+dribbble_username: 
 flickr_username: johndoe
 
 #for comments using disqus
-disqus_shortname: sujay-kundu
+disqus_shortname: 
 
 # wakatime username (coding activity)
-wakatime_username: sujaykundu777
+wakatime_username: 
 
 # mailchimp embedded form url (newsletter):
-mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
+mailchimp_form_url: 
 
 # formspree (contact form)
-formspree_email: johndoe@gmail.com
+formspree_email: 
 
 # syntax highlighter
 markdown: kramdown
