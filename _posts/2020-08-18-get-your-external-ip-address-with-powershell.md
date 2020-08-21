@@ -1,5 +1,13 @@
 ---
-title: Get your external IP address with PowerShell
+layout: post
+title:  "Get your external IP address with PowerShell"
+summary: A handy tip for getting your external IP address when you have PowerShell but no browser
+author: Tim Smith
+date: '2020-08-18 19:54:23'
+category: powershell, azure
+thumbnail: /assets/img/posts/powershell-ip-address.png
+keywords: azure, powershell, web development, 
+permalink: /blog/get-external-ip-powershell
 ---
 
 This is a common need, and one that gets more complicated with services hosted in Azure Apps and Virtual machines.
