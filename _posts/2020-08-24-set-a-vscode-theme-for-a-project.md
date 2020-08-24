@@ -5,7 +5,7 @@ summary: A simple and consistent way to distinguish between project windows
 author: Tim Smith
 date: '2020-08-24 08:30:00 +0000'
 category: vs-code
-thumbnail: /assets/img/posts/code.jpg
+thumbnail: /assets/img/posts/vs-code-workspace-color-theme.png
 keywords: vs-code, vs code themes, productivity
 permalink: /blog/set-a-vscode-theme-for-a-project
 ---

@@ -7,8 +7,8 @@ url: "" # the base hostname & protocol for your site, e.g. https://example.githu
 baseurl: "" # the subpath of your site, e.g. /blog
 
 urls:
-#    - text: About Me
-#      url: /about
+    - text: About Me
+      url: /about
     - text: Blog
       url: /blog
 # Disabling Gallery for the moment - I'm not a photographer. May come back with something another time
@@ -18,10 +18,10 @@ urls:
 #      url : /shop
     - text: Contact Me
       url : /contact
-    - text: Styleguide
-      url: /styleguide
-    - text: Get Started
-      url: /get-started
+#    - text: Styleguide
+#      url: /styleguide
+#    - text: Get Started
+#      url: /get-started
 
 # Edit these details
 
@@ -56,15 +56,16 @@ author_education_details:
 
 author_project_details:
               - project_thumbnail: gamershub.png
-                project_title: Gamers Hub
-                project_description: A Platform built for Gamers and Game Devs
+                project_title: Python
+                project_description: Wrote a tool that, when given a product, created custom Facebook audiences based on website behaviour and assigned adverts
                 project_url: https://gamershub.in
                 visibility: true
-              - project_thumbnail: hack4r.PNG
-                project_title: Hack4r
-                project_description: A Platform built for Hackers and Penetration Testers
-                project_url: https://hack4r.com
-                visibility: true
+              - project_thumbnail: piers_plowman.png
+                project_title: Piers piers_plowman
+                project_description: 
+                project_url:
+                visibility: false
+
 
 # social links
 twitter_username: tr_smith
@@ -76,7 +77,7 @@ instagram_username: the_aardwolf
 medium_username: 
 telegram_username: 
 dribbble_username: 
-flickr_username: johndoe
+flickr_username: timsmith714
 
 #for comments using disqus
 disqus_shortname: 
