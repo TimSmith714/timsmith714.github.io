@@ -2,8 +2,8 @@
 layout: post
 title:  "Welcome to devlopr jekyll !"
 summary: Hello World ! This is a sample post
-author: John Doe
-date: '2019-05-22 14:35:23 +0530'
+author: Tim Smith
+date: '2019-05-22 14:35:23 +0000'
 category: jekyll
 thumbnail: /assets/img/posts/code.jpg
 keywords: devlopr jekyll, how to use devlopr, devlopr, how to use devlopr-jekyll, devlopr-jekyll tutorial,best jekyll themes
