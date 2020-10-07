@@ -31,6 +31,7 @@ author_bio: My name is Tim Smith. Once a journalist of sorts and now a coder of 
 author_email: "web_contact@aw7.uk"
 author_location: UK
 author_website_url: "http://timsmith714.github.io"
+# Author Skills go in _includes/author_skills.html
 
 author_work_experiences:
             - company_name: Arun Estates Ltd
@@ -172,5 +173,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - _DRAFTS
 
 destination: ./build
