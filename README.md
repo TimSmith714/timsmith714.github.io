@@ -14,6 +14,12 @@ The Theme supports both Light and Dark Style. Highly Customizable and No Hosting
 
 devlopr uses Markdown Files to create data like Blog Posts, Gallery, Shop Products etc. No external database is required.
 
+### Running locally
+
+```bundle exec jekyll serve --watch``` to run locally
+
+```bundle exec jekyll build``` to build locally
+
 ### Deploy your devlopr-jekyll blog - One Click Deploy
 
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/sujaykundu777/devlopr-jekyll)

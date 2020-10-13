@@ -1,7 +1,7 @@
 title: Tim Smith
-subtitle: A Jekyll Theme Built for Developers
+subtitle: Senior Developer by day, bibliophile by night. Also known to make music and read poetry
 description: >- # this means to ignore newlines until "baseurl:"
-  devlopr-jekyll is a Jekyll Theme Built For Developers
+  This is my personal site where I'll share anything I think could be of interest
 
 url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -35,20 +35,20 @@ author_website_url: "http://timsmith714.github.io"
 
 author_work_experiences:
             - company_name: Arun Estates Ltd
-              company_logo: google.png
+              company_logo: office-business-icons/PNG/256/Organizing.png
               company_url: https://www.arunestates.co.uk
               designation: Senior Developer
               description: I manage the various websites and work on in house tools. I focus on Azure
               visibility: true
             - company_name: Computeractive
-              company_logo: microsoft.png
+              company_logo: office-business-icons/PNG/256/Writing&Drinking.png
               company_url: https://www.computeractive.co.uk
               designation: Workshops Editor
               description: Wrote and edited the Workshops section of the magazine. During my time on the magazine I also wrote, presented and edited videos, managed the forums. Known as the 'Technical heart' of the magazine
               visibility: true
 
 author_education_details:
-              - college_logo: 
+              - college_logo: office-business-icons/PNG/256/Diploma.png
                 college_name: University of Kent
                 college_url: https://www.kent.ac.uk/
                 college_degree: BA (hons) in History
@@ -56,14 +56,14 @@ author_education_details:
                 visibility: true
 
 author_project_details:
-              - project_thumbnail: gamershub.png
+              - project_thumbnail: office-business-icons/PNG/256/CTA.png
                 project_title: Python
                 project_description: Wrote a tool that, when given a product, created custom Facebook audiences based on website behaviour and assigned adverts
-                project_url: https://gamershub.in
+                project_url: 
                 visibility: true
               - project_thumbnail: piers_plowman.png
                 project_title: Piers piers_plowman
-                project_description: 
+                project_description: Took some time, but I managed to read it all
                 project_url:
                 visibility: false
 

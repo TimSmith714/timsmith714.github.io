@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512.009" style="enable-background:new 0 0 512 512.009;" xml:space="preserve">
+<g id="_x23_printer">
+	<g>
+		<defs>
+			<circle id="SVGID_1_" cx="256" cy="256.005" r="256"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<circle style="clip-path:url(#SVGID_2_);fill:#26424B;" cx="256" cy="256.005" r="256"/>
+		<path style="clip-path:url(#SVGID_2_);fill:#EAEBE1;" d="M490.724,382.971H21.276c-6.6,0-12-5.4-12-12V192.71c0-6.6,5.4-12,12-12
+			h469.448c6.6,0,12,5.4,12,12v178.262C502.724,377.571,497.324,382.971,490.724,382.971z"/>
+		<path style="clip-path:url(#SVGID_2_);fill:#26424B;" d="M427.082,376.579H84.918c-6.6,0-12-5.4-12-12v-23.078c0-6.6,5.4-12,12-12
+			h342.163c6.6,0,12,5.4,12,12v23.078C439.082,371.179,433.682,376.579,427.082,376.579z"/>
+		<g style="clip-path:url(#SVGID_2_);">
+			<path style="fill:#FFFFFF;" d="M423.825,478.871c-111.883,0-223.766,0-335.649,0c22.377-41.944,44.753-83.888,67.13-125.831
+				c67.13,0,134.26,0,201.39,0C379.072,394.984,401.448,436.927,423.825,478.871z"/>
+		</g>
+		<path style="clip-path:url(#SVGID_2_);fill:#77B4BE;" d="M406.158,209.126H105.842c-6.6,0-12-5.4-12-12v-37.545
+			c0-6.6,5.4-12,12-12h300.316c6.6,0,12,5.4,12,12v37.545C418.158,203.726,412.758,209.126,406.158,209.126z"/>
+		<circle style="clip-path:url(#SVGID_2_);fill:#DB605A;" cx="410.275" cy="249.91" r="15.147"/>
+		<circle style="clip-path:url(#SVGID_2_);fill:#E8B750;" cx="454.301" cy="249.91" r="15.147"/>
+		<g style="opacity:0.3;clip-path:url(#SVGID_2_);">
+			<path style="fill:#FFFFFF;" d="M105.842,147.581c-6.6,0-12,5.4-12,12v21.129H21.276c-6.6,0-12,5.4-12,12v178.261
+				c0,6.6,5.4,12,12,12h118.735l235.391-235.391H105.842z"/>
+		</g>
+	</g>
+</g>
+<g id="Livello_1">
+</g>
+</svg>

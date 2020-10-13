@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 537.009 512.009" style="enable-background:new 0 0 537.009 512.009;" xml:space="preserve">
+<g id="_x23_business-card">
+	<g>
+		<defs>
+			<circle id="SVGID_1_" cx="256" cy="256.005" r="256"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_2_);">
+			<defs>
+				<circle id="SVGID_3_" cx="256" cy="256.005" r="256"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<g style="clip-path:url(#SVGID_4_);">
+				<circle style="fill:#77B4BE;" cx="256" cy="256.005" r="256"/>
+			</g>
+		</g>
+		<rect x="81.009" y="128.316" style="clip-path:url(#SVGID_2_);fill:#EAEBE1;" width="456" height="270.102"/>
+		<rect x="81.009" y="327.418" style="clip-path:url(#SVGID_2_);fill:#DB605A;" width="157" height="35"/>
+		<rect x="81.009" y="362.482" style="clip-path:url(#SVGID_2_);fill:#26424B;" width="198.266" height="35"/>
+		<circle style="clip-path:url(#SVGID_2_);fill:#26424B;" cx="180.142" cy="213.422" r="57.005"/>
+		<g style="clip-path:url(#SVGID_2_);">
+			<circle style="fill:#FFFFFF;" cx="180.142" cy="193.763" r="22.739"/>
+			<path style="fill:#FFFFFF;" d="M189.593,274.973h-18.903c-9.35,0-17-7.65-17-17v-24.471c0-9.35,7.65-17,17-17h18.903
+				c9.35,0,17,7.65,17,17v24.471C206.593,267.323,198.943,274.973,189.593,274.973z"/>
+		</g>
+		<g style="clip-path:url(#SVGID_2_);">
+			<rect x="321.009" y="195.418" style="fill:#26424B;" width="200" height="10"/>
+		</g>
+		<g style="clip-path:url(#SVGID_2_);">
+			<rect x="321.009" y="228.668" style="fill:#26424B;" width="200" height="10"/>
+		</g>
+		<g style="clip-path:url(#SVGID_2_);">
+			<rect x="321.009" y="261.918" style="fill:#26424B;" width="200" height="10"/>
+		</g>
+		<g style="clip-path:url(#SVGID_2_);">
+			<rect x="348.009" y="295.168" style="fill:#26424B;" width="146" height="10"/>
+		</g>
+		<g style="clip-path:url(#SVGID_2_);">
+			<rect x="348.009" y="328.418" style="fill:#26424B;" width="146" height="10"/>
+		</g>
+		<g style="opacity:0.2;clip-path:url(#SVGID_2_);">
+			<polygon style="fill:#FFFFFF;" points="81.009,128.316 81.009,398.418 155.815,398.418 425.917,128.316 			"/>
+		</g>
+	</g>
+</g>
+<g id="Livello_1">
+</g>
+</svg>

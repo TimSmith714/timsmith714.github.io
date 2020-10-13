@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512.009" style="enable-background:new 0 0 512 512.009;" xml:space="preserve">
+<g id="_x23_cell">
+	<g>
+		<defs>
+			<circle id="SVGID_1_" cx="256" cy="256.005" r="256"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_2_);">
+			<circle style="fill:#77B4BE;" cx="256" cy="256.005" r="256"/>
+			<path style="fill:#26424B;" d="M369.907,508.788H155.532c-6.6,0-12-5.4-12-12V77.761c0-6.6,5.4-12,12-12h214.375
+				c6.6,0,12,5.4,12,12v419.027C381.907,503.388,376.507,508.788,369.907,508.788z"/>
+			<rect x="161.41" y="97.183" style="opacity:0.34;" width="202.618" height="340.301"/>
+			<circle style="opacity:0.34;" cx="262.72" cy="475.332" r="17.065"/>
+			<g style="opacity:0.13;">
+				<path style="fill:#FFFFFF;" d="M369.907,65.761H155.532c-6.6,0-12,5.4-12,12v354.327L374.228,66.584
+					C372.884,66.06,371.43,65.761,369.907,65.761z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Livello_1">
+</g>
+</svg>
