@@ -90,7 +90,7 @@ wakatime_username:
 mailchimp_form_url: 
 
 # formspree (contact form)
-formspree_email: 
+formspree_email: timsmith714@gmail.com
 
 # syntax highlighter
 markdown: kramdown
