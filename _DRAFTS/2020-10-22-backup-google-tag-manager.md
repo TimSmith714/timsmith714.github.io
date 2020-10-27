@@ -12,12 +12,8 @@ permalink: /blog/welcome-to-devlopr-jekyll
 
 In the many years I've been using Google Tag Manager I've never had a problem with settings being lost. Not just that, but it has versioning built in from the start so rolling back changes has been just way I like it when things go wrong - boring. But that's no reason not to 
 
-I found this helpful article on [exporting a google tag manager container][export-gta] that explains just how simple the process is. 
+I found this helpful article on [exporting a google tag manager container][export-gta] that explains just how simple the process is.
 
 What I appreciated the most is the tags, triggers, variables and templates are all exported in json format.::
 
-
-
 [export-gta]: https://beaconfire-red.com/insights/google-tag-manager-bug-how-back
-
-
