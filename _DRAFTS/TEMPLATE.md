@@ -4,7 +4,7 @@ title:  "Title HERE"
 summary: Summary for the post goes here
 author: Tim Smith
 date: '2019-05-22 14:35:23 +0000'
-categories: comma deliminted, use catergory for single 
+categories: ['comma', 'deliminted'] make sure there's a page in /categories for the category 
 thumbnail: /assets/img/posts/code.jpg
 keywords: comma, deliminated
 permalink: /blog/welcome-to-devlopr-jekyll

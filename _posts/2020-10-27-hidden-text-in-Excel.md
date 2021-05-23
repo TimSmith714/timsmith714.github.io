@@ -4,7 +4,7 @@ title:  "Hide text in Excel cells"
 summary: Do not rely on colour formatting to keep numbers hidden
 author: Tim Smith
 date: '2020-10-26 19:35:23'
-categories: Excel, Conditional Formatting, reporting
+categories: ['excel', 'conditional_formatting', 'reporting']
 thumbnail: /assets/img/posts/excel-custom-formatting.png
 keywords: excel, conditional formatting, reports, office
 permalink: /blog/hide-text-in-excel-fields
