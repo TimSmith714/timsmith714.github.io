@@ -1,0 +1,4261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tim Smith</title>
+    <description>This is my personal site where I'll share anything I think could be of interest</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 23 May 2021 16:44:50 +0000</pubDate>
+    <lastBuildDate>Sun, 23 May 2021 16:44:50 +0000</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
+
+    
+      <item>
+        <title>Did we miss the Year of Linux on the desktop?</title>
+        <description>&lt;p&gt;Sometimes it’s hard to be a developer on Windows as you cast an envious eye over to the Unix world. Some of the CLI tools are so attractive. Don’t get me wrong, PowerShell constantly impresses me but I’m envious of those times when installing a new framework can be done with a single &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apt install&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;So over the years I’ve sneaked in Virtual Machines (when my PC could handle it) or reused old PCs that were lying around but remote access is never quite the same. Especially if, like me, you appreciate the extra help from Visual Studio or Visual Studio Code. I’m not saying vim isn’t powerful, but there’s only so many text editors I can learn. It’s an odd situation because most of the actual &lt;em&gt;tools&lt;/em&gt; live in the terminal.&lt;/p&gt;
+
+&lt;p&gt;Enter WSL and the way it works with Visual Studio Code. I’m writing this in &lt;a href=&quot;https://code.visualstudio.com&quot;&gt;Visual Studio Code&lt;/a&gt; on Windows connected to the Ubuntu WSl on the same computer. I can work on the Jekyll site in the terminal (and &lt;a href=&quot;https://github.com/microsoft/terminal&quot;&gt;Windows Terminal&lt;/a&gt; is wonderful for this) but use a friendlier editor on my desktop.&lt;/p&gt;
+
+&lt;p&gt;So Linux is on the desktop this year. Maybe not in the way we thought it might be but I’m using it most days, certainly more than I did when I was remoting in to an old PC.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 May 2021 16:36:23 +0000</pubDate>
+        <link>/blog/did-we-miss-the-year-of-linux</link>
+        <guid isPermaLink="true">/blog/did-we-miss-the-year-of-linux</guid>
+      </item>
+    
+      <item>
+        <title>Hide text in Excel cells</title>
+        <description>&lt;p&gt;One limitation of Conditional Formatting is that it’s applied to the cell with the value. I’m happy to be proved wrong or ignorant (though, let me be clear, just in this very specific context) but there isn’t a way to apply the conditional formatting based on the adjacent cell’s value. This is frustrating if you want to show a graphic without the value showing.&lt;/p&gt;
+
+&lt;p&gt;Changing the colour of the text is one option, but that leaves the risk of the value suddenly appearing if the cell colour is changed.&lt;/p&gt;
+
+&lt;p&gt;A custom formatting option is the answer. Select the cell and press Ctrl+1 to show the Format Cells window. Click the Number tab and then custom in the left-hand Category list.&lt;/p&gt;
+
+&lt;p&gt;Click in the Type text box in the main part of the window and enter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;;;;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The text has now disappeared. If I still want to show a value, just not alongside the conditional formatting, I set the conditional formatting cell to pull in that adjacent value, something simple like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=c5&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;A custom format has four elements, each separated by a semi-colon:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Positive numbers&lt;/li&gt;
+  &lt;li&gt;Negative numbers&lt;/li&gt;
+  &lt;li&gt;Zero&lt;/li&gt;
+  &lt;li&gt;Text&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So in this a custom format defined as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;;;;&lt;/code&gt; displays nothing regardless of the cell contents.&lt;/p&gt;
+
+&lt;h2 id=&quot;one-step-further&quot;&gt;One step further&lt;/h2&gt;
+
+&lt;p&gt;So as I was writing this I was wondering if there might be a use case where you would want to see text - a formula error was the obvious one that sprang to mind. Otherwise you run the risk of a silent error, the type that’s most likely to spoil your day.&lt;/p&gt;
+
+&lt;p&gt;The solution is to leave the numeric options blank but use the @ glyph to include text, thusly &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;;;;@&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/excel-custom-formatting-small.png&quot; alt=&quot;Screenshot showing error but number is hidden&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;or-you-could-do-it-the-easy-way&quot;&gt;Or you could do it the easy way&lt;/h2&gt;
+
+&lt;p&gt;If you’re only planning on using an icon set rather than colours, Excel offers this an option in the Edit Formatting Rule window. (I would only find this after writing the rest of the post!). Select “Show Icon Only” to make the contents of cell disappear. I was very pleased to see that error text is shown so there won’t be any silent errors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/excel-icon-set.png&quot; alt=&quot;Screenshot showing error but number is hidden&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://support.microsoft.com/en-us/office/review-guidelines-for-customizing-a-number-format-c0a1d1fa-d3f4-4018-96b7-9c9354dd99f5&quot;&gt;Official Microsoft documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 Oct 2020 19:35:23 +0000</pubDate>
+        <link>/blog/hide-text-in-excel-fields</link>
+        <guid isPermaLink="true">/blog/hide-text-in-excel-fields</guid>
+      </item>
+    
+      <item>
+        <title>Set a Visual Studio Code theme for a specific project</title>
+        <description>&lt;p&gt;A good way to distinguish between several projects open at the same time is to use a separate [[VS Code Theme]] for each one.
+This will create a .vscode folder in your project so bear that in mind in shared projects.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First make sure you have the Themes you want to use has been installed&lt;/li&gt;
+  &lt;li&gt;Click File, Preferences, Settings&lt;/li&gt;
+  &lt;li&gt;Click the Workspace tab. I had: User, Remote [WSL: Ubuntu 20.04], Workspace&lt;/li&gt;
+  &lt;li&gt;Open Workbench in the left hand menu and click the Appearance submenu&lt;/li&gt;
+  &lt;li&gt;Scroll to Color Theme in the main window and select the desired theme&lt;/li&gt;
+  &lt;li&gt;The change should happen automatically and you can check for a .vscode folder in your project. If there are no other customised settings the settings.json file should look something like this&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;workbench.colorTheme&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Solarized Dark&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+</description>
+        <pubDate>Mon, 24 Aug 2020 08:30:00 +0000</pubDate>
+        <link>/blog/set-a-vscode-theme-for-a-project</link>
+        <guid isPermaLink="true">/blog/set-a-vscode-theme-for-a-project</guid>
+      </item>
+    
+      <item>
+        <title>Simulate an input event in Nightwatchjs</title>
+        <description>&lt;p&gt;Adding a value to an input box is fairly straightforward in Nightwatchjs, even though .setValue() doesn’t seem to be working at the moment.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;#calculator &amp;gt; div &amp;gt; form &amp;gt; div:nth-child(2) &amp;gt; input&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;300000&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;But the page I was testing depends on a Javascript event firing on input. Simply setting the value like this wasn’t enough. Although the form was completed correctly the javascript variable used for the eventual calculation remained the same.&lt;/p&gt;
+
+&lt;p&gt;The solution is to fire dispatchEvent on the element after setting the value&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;#homewise-calculator &amp;gt; div &amp;gt; form &amp;gt; div:nth-child(2) &amp;gt; input&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dispatchEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;some-helpful-references&quot;&gt;Some helpful references&lt;/h2&gt;
+
+&lt;p&gt;This answer on StackOverflow describes the dispatch even though it’s a different event type [How to trigger event in Javascript][https://stackoverflow.com/a/50587874/3066321]&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 21 Aug 2020 10:54:23 +0000</pubDate>
+        <link>/blog/simulate-input-event-nightwatchjs</link>
+        <guid isPermaLink="true">/blog/simulate-input-event-nightwatchjs</guid>
+      </item>
+    
+      <item>
+        <title>Get your external IP address with PowerShell</title>
+        <description>&lt;p&gt;This is a common need, and one that gets more complicated with services hosted in Azure Apps and Virtual machines.&lt;/p&gt;
+
+&lt;p&gt;Normally I’d just search “What’s my IP address” but that isn’t possible with an Azure App Service.&lt;/p&gt;
+
+&lt;p&gt;But I did discover that the Kodu Powershell is available, In the left hand menu of your App Service, look for Development Tools and click Advanced Tools and then Go. Click Debug Console and then PowerShell.&lt;/p&gt;
+
+&lt;p&gt;You can now follow massively useful tip by &lt;a href=&quot;https://twitter.com/cl&quot;&gt;Chrissy LeMaire&lt;/a&gt;  at https://blog.netnerds.net/2013/09/powershell-two-liner-get-external-ip-address/ and run&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Invoke-RestMethod https://ipinfo.io/json&lt;/code&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 18 Aug 2020 19:54:23 +0000</pubDate>
+        <link>/blog/get-external-ip-powershell</link>
+        <guid isPermaLink="true">/blog/get-external-ip-powershell</guid>
+      </item>
+    
+
+    
+      
+        
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : Guides &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;26 Oct 2020&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;/blog/hide-text-in-excel-fields&quot;&gt;Hide text in Excel cells&lt;/a&gt;&lt;/li&gt;
+
+&lt;/div&gt;
+</description>
+            <link>/blog/categories/excel/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+        
+          <item>
+            <title></title>
+            <description>&lt;h3&gt;   &lt;/h3&gt;
+
+&lt;div id=&quot;categories&quot;&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#powershell&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/powershell&quot;&gt;powershell&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;powershell&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/get-external-ip-powershell&quot;&gt;Get your external IP address with PowerShell&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#azure&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/azure&quot;&gt;azure&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;azure&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/get-external-ip-powershell&quot;&gt;Get your external IP address with PowerShell&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#nightwatchjs&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/nightwatchjs&quot;&gt;nightwatchjs&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;nightwatchjs&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/simulate-input-event-nightwatchjs&quot;&gt;Simulate an input event in Nightwatchjs&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#vs-code&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/vs-code&quot;&gt;vs-code&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;vs-code&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/set-a-vscode-theme-for-a-project&quot;&gt;Set a Visual Studio Code theme for a specific project&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#excel&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/excel&quot;&gt;excel&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;excel&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/hide-text-in-excel-fields&quot;&gt;Hide text in Excel cells&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#conditional_formatting&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/conditional_formatting&quot;&gt;conditional_formatting&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;conditional_formatting&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/hide-text-in-excel-fields&quot;&gt;Hide text in Excel cells&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#reporting&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/reporting&quot;&gt;reporting&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;reporting&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/hide-text-in-excel-fields&quot;&gt;Hide text in Excel cells&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#linux&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/linux&quot;&gt;linux&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;linux&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/did-we-miss-the-year-of-linux&quot;&gt;Did we miss the Year of Linux on the desktop?&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#wsl&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/wsl&quot;&gt;wsl&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;wsl&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/did-we-miss-the-year-of-linux&quot;&gt;Did we miss the Year of Linux on the desktop?&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#windows&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/windows&quot;&gt;windows&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;windows&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/did-we-miss-the-year-of-linux&quot;&gt;Did we miss the Year of Linux on the desktop?&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#microsoft&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/blog/categories/microsoft&quot;&gt;microsoft&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;microsoft&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/did-we-miss-the-year-of-linux&quot;&gt;Did we miss the Year of Linux on the desktop?&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+</description>
+            <link>/blog/categories/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : Guides &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;18 Aug 2020&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;/blog/get-external-ip-powershell&quot;&gt;Get your external IP address with PowerShell&lt;/a&gt;&lt;/li&gt;
+
+&lt;/div&gt;
+</description>
+            <link>/blog/categories/azure/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Books read in 2019</title>
+            <description>&lt;h1 id=&quot;books-read-in-2019&quot;&gt;Books read in 2019&lt;/h1&gt;
+&lt;p&gt;With links to reviews where I have them&lt;/p&gt;
+
+</description>
+            <link>/books/books-read-in-2019/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : Guides &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;26 Oct 2020&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;/blog/hide-text-in-excel-fields&quot;&gt;Hide text in Excel cells&lt;/a&gt;&lt;/li&gt;
+
+&lt;/div&gt;
+</description>
+            <link>/blog/categories/conditional_formatting/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.guides %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>/blog/categories/guides/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Get Started</title>
+            <description>## Getting Started - How to use “devlopr-jekyll” theme
+
+## What's Jekyll ?
+
+If you aren’t familiar with Jekyll yet, you should know that it is a static site generator. It will transform your plain text into static websites and blogs. No more databases, slow loading websites, risk of being hacked…just your content. And not only that, with Jekyll you get free hosting with GitHub Pages! If you are a beginner we recommend you start with [Jekyll’s Docs](https://jekyllrb.com/docs/installation/). Now, if you know how to use Jekyll, let’s move on to using this theme in Jekyll:
+
+## Watch Tutorial
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cXBEfpn0qrg?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+### Steps to create your blog using devlopr-jekyll and Host using Github Pages :
+
+&gt;  **Step 1.**  Fork the repo - [click here](https://github.com/sujaykundu777/devlopr-jekyll/fork)
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork1.png){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 2.** Use **your-github-username.github.io** as the new repo  ( Replace your-github-username with yours). Remember if you use the name other than your-github-username.github.io , your blog will be built using gh-pages branch.
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork2.png){:class=&quot;img-fluid&quot;}
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork3.png){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 3.** Clone the new repo locally to make changes :
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork31.png){:class=&quot;img-fluid&quot;}
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork32.png){:class=&quot;img-fluid&quot;}
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork33.png){:class=&quot;img-fluid&quot;}
+
+```bash
+ $ git clone https://github.com/yourusername/yourusername.github.io
+ $ cd yourusername.github.io
+ $ code .
+```
+
+&gt; **Step 4.** Open the files using VSCode and edit _config.yml and edit with your details:
+
+- _config.yml file - replace with your own details
+- _posts - Add your blog posts here
+- _includes - You can replace the contents of the files with your data. (contains widgets)
+- _assets/img - Add all your images here
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork34.png){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 5** - Install the development requirements:
+
+### Set up local development environment
+
+1. [Git](https://git-scm.com/)
+2. [Ruby](https://www.ruby-lang.org/) and [Bundler](https://bundler.io/)
+3. [VSCode](https://code.visualstudio.com/download)
+
+We need ruby and bundler to build our site locally. After installation check if its working:
+
+For ruby :
+
+```bash
+$ ruby -v
+ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux-gnu]
+```
+For bundler :
+
+```bash
+$ gem install bundler
+$ bundler -v
+Bundler version 2.2.6
+```
+Add jekyll :
+
+```bash
+$ bundle add jekyll
+```
+ This command will add the Jekyll gem to our Gemfile and install it to the ./vendor/bundle/ folder.
+
+You can check the jekyll version
+
+```
+$ bundle exec jekyll -v
+jekyll 4.2.0
+```
+
+&gt; **Step 6.** Install the gem dependencies by running the following command
+
+```bash
+$ bundle update
+$ bundle install
+```
+
+&gt; **Step 7.** Serve the site locally by running the following command below:
+
+```bash
+$ bundle exec jekyll serve --watch
+```
+or you can also serve using :
+
+```bash
+$ jekyll serve
+```
+
+Visit [http://localhost:4000](http://localhost:4000) for development server
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork4.png){:class=&quot;img-fluid&quot;}
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork41.png){:class=&quot;img-fluid&quot;}
+
+### Adding Content
+
+Start populating your blog by adding your .md files in _posts. devlopr-jekyll already has a few examples.
+
+#### YAML Post Example:
+
+```yml
+---
+layout: post
+title: Sample Post
+author: Sujay Kundu
+date: '2019-05-21 14:35:23 +0530'
+category:
+        - jekyll
+summary: This is the summary for the sample post
+thumbnail: sample.png
+---
+
+Hi ! This is sample post.
+
+```
+
+#### YAML Page Example:
+
+```yml
+---
+layout: page
+title: Sample Page
+menus: header
+permalink: /sample-page/
+---
+
+Hi ! This is sample page.
+```
+
+#### Editing stylesheet
+
+You’ll only work with a single file to edit/add theme style: assets/css/main.scss.
+
+### Deploy your Changes
+
+Once happy with your blog changes. Push your changes to master branch.
+
+&gt; **Step 8.** Push Your Local Changes
+
+```bash
+ $ git add .
+ $ git commit -m &quot;my new blog using devlopr-jekyll&quot;
+ $ git push origin master
+```
+
+Visit your Github Repo settings ! Enable master branch as Github Pages Branch :
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork6.png){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 9.** Deploy your Blog :
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork7.png){:class=&quot;img-fluid&quot;}
+
+&gt; Congrats ! On your new shining Blog !
+
+You can visit the blog using [http://your-github-username.github.io](http://your-github-username.github.io).
+
+</description>
+            <link>/get-started/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Jekyll</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.jekyll %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>/blog/categories/jekyll/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.linux %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>/blog/categories/linux/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.microsoft %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>/blog/categories/microsoft/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.nightwatchjs %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>/blog/categories/nightwatchjs/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.powershell %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>/blog/categories/powershell/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.reporting %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>/blog/categories/reporting/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.sample_category %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>/blog/categories/sample_category/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Our Sponsors</title>
+            <description>Thanks to all the amazing contributors and our Backers for the support.
+
+- [Dirish Mohan](https://dirishmohan.com)</description>
+            <link>/sponsors/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Styleguide</title>
+            <description>### devlopr - Styleguide
+
+&lt;hr /&gt;
+
+ &lt;img src=&quot;/assets/img/styleguide.png&quot; class=&quot;img-fluid&quot;&gt;
+
+&lt;p&gt; Lets try the different text styles  &lt;b&gt; Bold &lt;/b&gt; , &lt;strong&gt; Strong &lt;/strong&gt;, &lt;em&gt; Emphasis &lt;/em&gt;, &lt;i&gt; Italic &lt;/i&gt; &lt;/p&gt;
+
+
+&lt;p&gt; Now, lets try different heading styles : &lt;/p&gt;
+
+&lt;h1&gt; Hello in h1 ! &lt;/h1&gt;
+&lt;h2&gt; Hello in h2 ! &lt;/h2&gt;
+&lt;h3&gt; Hello in h3 ! &lt;/h3&gt;
+&lt;h4&gt; Hello in h4 ! &lt;/h4&gt;
+&lt;h5&gt; Hello in h5 ! &lt;/h5&gt;
+&lt;h6&gt; Hello in h6 ! &lt;/h6&gt;
+
+&lt;hr /&gt;
+&lt;p&gt; Unordered List &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt; List Item 1 &lt;/li&gt;
+&lt;li&gt; List Item 2 &lt;/li&gt;
+&lt;li&gt; List Item 3 &lt;/li&gt;
+&lt;li&gt; List Item 4 &lt;/li&gt;
+&lt;li&gt; List Item 5 &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; Ordered List &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt; List Item 1 &lt;/li&gt;
+&lt;li&gt; List Item 2 &lt;/li&gt;
+&lt;li&gt; List Item 3 &lt;/li&gt;
+&lt;li&gt; List Item 4 &lt;/li&gt;
+&lt;li&gt; List Item 5 &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is a Block Quote,  It can Expand Multiple Lines &lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt; text. &lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt; This line of text is meant to be deleted text &lt;/del&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;This line of text will render as underlined&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;attribute&quot;&gt;attr&lt;/abbr&gt;&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;HyperText Markup Language&quot; class=&quot;initialism&quot;&gt;HTML&lt;/abbr&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;div class=&quot;responsive-table&quot;&gt;
+&lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;col&quot;&gt;#&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt; Instagram Embed &lt;/h3&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned data-instgrm-permalink=&quot;https://www.instagram.com/p/CBXO7AypXkM/?utm_source=ig_embed&amp;amp;utm_campaign=loading&quot; data-instgrm-version=&quot;13&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:16px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/CBXO7AypXkM/?utm_source=ig_embed&amp;amp;utm_campaign=loading&quot; style=&quot; background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;&quot; target=&quot;_blank&quot;&gt; &lt;div style=&quot; display: flex; flex-direction: row; align-items: center;&quot;&gt; &lt;div style=&quot;background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display: flex; flex-direction: column; flex-grow: 1; justify-content: center;&quot;&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;padding: 19% 0;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display:block; height:50px; margin:0 auto 12px; width:50px;&quot;&gt;&lt;svg width=&quot;50px&quot; height=&quot;50px&quot; viewBox=&quot;0 0 60 60&quot; version=&quot;1.1&quot; xmlns=&quot;https://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;https://www.w3.org/1999/xlink&quot;&gt;&lt;g stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;g transform=&quot;translate(-511.000000, -20.000000)&quot; fill=&quot;#000000&quot;&gt;&lt;g&gt;&lt;path d=&quot;M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/div&gt;&lt;div style=&quot;padding-top: 8px;&quot;&gt; &lt;div style=&quot; color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;&quot;&gt; View this post on Instagram&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;padding: 12.5% 0;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;&quot;&gt;&lt;div&gt; &lt;div style=&quot;background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot;background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;margin-left: 8px;&quot;&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot; width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;margin-left: auto;&quot;&gt; &lt;div style=&quot; width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot; background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot; width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt; &lt;div style=&quot;display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;&quot;&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/p/CBXO7AypXkM/?utm_source=ig_embed&amp;amp;utm_campaign=loading&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_blank&quot;&gt;A post shared by Sujay (@sujaykundu777)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt; &lt;script async src=&quot;//www.instagram.com/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt; Twitter Embed &lt;/h3&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;I just published “Deploying a blog using Jekyll and Github Pages with SSL certificate for Free” &lt;a href=&quot;https://t.co/B3T3IQVU93&quot;&gt;https://t.co/B3T3IQVU93&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sujay Kundu (@SujayKundu777) &lt;a href=&quot;https://twitter.com/SujayKundu777/status/1012601950469160962?ref_src=twsrc%5Etfw&quot;&gt;June 29, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+
+
+&lt;h3&gt;YouTube Responsive Embed&lt;/h3&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/bBpKMH3nBzE?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;Vimeo Responsive Embed&lt;/h3&gt;
+
+&lt;iframe src=&quot;https://player.vimeo.com/video/212114694?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;ted-responsive-embed&quot;&gt;TED Responsive Embed&lt;/h3&gt;
+
+&lt;iframe src=&quot;https://embed.ted.com/talks/ted_halstead_a_climate_solution_where_all_sides_can_win&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;twitch-responsive-embed&quot;&gt;Twitch Responsive Embed&lt;/h3&gt;
+
+&lt;iframe src=&quot;https://player.twitch.tv/?autoplay=false&amp;amp;video=v248755437&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; scrolling=&quot;no&quot; height=&quot;378&quot; width=&quot;620&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;soundcloud-embed&quot;&gt;SoundCloud Embed&lt;/h3&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/29738591&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;codepen-embed&quot;&gt;CodePen Embed&lt;/h3&gt;
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;YWvpRo&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;kharrop&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Referral Form&quot; class=&quot;codepen&quot;&gt;&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;syntax-highlighting&quot;&gt;Syntax Highlighting&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;s1&quot;&gt;'use strict'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;markdown&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'markdown'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Editor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;preview&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;preview&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHTML&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toHTML&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;editor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can add inline code just like this, E.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;.code { color: #fff; }&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;pre&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#f4f4f4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;github-gist-embed&quot;&gt;GitHub gist Embed&lt;/h3&gt;
+
+&lt;script src=&quot;https://gist.github.com/ahmadajmi/dbb4f713317721668bcbc39420562afc.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;input-style&quot;&gt;Input Style&lt;/h3&gt;
+
+&lt;p&gt;&lt;input type=&quot;text&quot; placeholder=&quot;I'm an input field!&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+
+</description>
+            <link>/styleguide/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.vs-code %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>/blog/categories/vs-code/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.windows %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>/blog/categories/windows/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.wsl %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>/blog/categories/wsl/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Security Policy</title>
+            <description># Security Policy
+
+## Supported Versions
+
+Use this section to tell people about which versions of your project are
+currently being supported with security updates.
+
+| Version | Supported          |
+| ------- | ------------------ |
+| 5.1.x   | :white_check_mark: |
+| 5.0.x   | :x:                |
+| 4.0.x   | :white_check_mark: |
+| &lt; 4.0   | :x:                |
+
+## Reporting a Vulnerability
+
+Use this section to tell people how to report a vulnerability.
+
+Tell them where to go, how often they can expect to get an update on a
+reported vulnerability, what to expect if the vulnerability is accepted or
+declined, etc.
+</description>
+            <link>/SECURITY/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Change Log</title>
+            <description># Change Log
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
+
+**Note that references to the Font-Awesome-Pro repository refer to a GitHub
+repository that is by invitation only. You will get a 404 - Not Found if you do
+not have access**
+
+---
+
+## [5.1.0](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.1.0)  - 2018-06-20
+
+**Minor version upgrade notice: there are some backward-incompatible changes to this release. See the
+[UPGRADING.md guide](https://github.com/FortAwesome/Font-Awesome/blob/master/UPGRADING.md) for more
+information.**
+
+### Added
+* New Emoji, Design, and Travel category pack
+* Another group of requested and commissioned icons
+* Version 4 shim for Web Fonts with CSS
+* New simplified download and NPM packages
+* @fortawesome/fontawesome-free and @fortawesome/fontawesome-pro NPM packages that match what's available in the CDN and .ZIP files
+* Brand icons rev, nimblr, megaport, mailchimp, hornbill, wix, weebly, themeco, squarespace, aws, shopware
+* API method toHtml() for converting abstract objects to HTML
+* API method counter() to generate Layers Counters
+* API method watch() to configure MutationObserver and watch DOM for icon changes and additions
+
+### Changed
+* Relocating sponsor data to a separate sponsors.yml
+* Updated teamspeak brand icon
+* No more default exports in the CommonJS/ES packages (anything installed from NPM)
+* Greatly improved performance and rendering of CSS pseudo-elements with SVG and JavaScript
+* Configuration of SVG with JavaScript can now be done with attributes on the script tag
+* SVG with JavaScript pseudo-elements now match syntax (font-family, font-weight) of Web Fonts with CSS
+
+### Fixed
+* Tree shaking of all NPM packages by default
+* Alignment of the book-open and dice-six icon
+* Correcting creative-commons
+* Incorrect license on the fontawesome-common-types package
+* Improve ligatures that share a base name with another ligature
+* Correcting solid style of the digital-tachograph icon
+* Prevent duplicating classes in some scenarios with SVG with JavaScript
+* Duplicate insertion of CSS when insertCss() method was called
+* Missing TypeScript definitions for the free-brands-svg-icons package
+
+---
+
+## [5.0.13](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.13)  - 2018-05-10
+
+### Added
+* 68 icons to Free and 165 to Pro of the most requested icons in Font Awesome
+
+---
+
+## [5.0.12](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.12)  - 2018-05-03
+
+### Added
+* A long time ago in a galaxy far, far away some icons were added
+
+### Fixed
+* Renamed the r brand to r-project to prevent ligature collision with the &quot;r&quot; glyph
+
+---
+
+## [5.0.11](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.11)  - 2018-05-01
+
+### Added
+* 16 new user icons
+* Full set of Creative Commons symbols
+* Regular style comment-dots used for v4 comment-alt in shim
+* Top 6 brand icons: r, ebay, mastodon, researchgate, keybase, teamspeak
+
+### Changed
+* Revised slider icons FortAwesome/Font-Awesome#11872
+* Make desktop typeface easier to find in apps that support ligature previews
+
+### Fixed
+* Remove errant XML entity from the lastfm-square icon FortAwesome/Font-Awesome#12847
+* Correcting paths in cloud icons FortAwesome/Font-Awesome-Pro#920
+
+---
+
+## [5.0.10](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.10)  - 2018-04-10
+
+### Added
+* New java brand icon FortAwesome/Font-Awesome#386
+
+### Changed
+* Updating depth of dna icon
+* Updating pied-piper, adding pied-piper-hat
+
+### Fixed
+* Correcting path errors on readme icon FortAwesome/Font-Awesome#12754
+* Light style of lamp icon FortAwesome/Font-Awesome#12725
+
+---
+
+## [5.0.9](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.9)  - 2018-03-27
+
+### Added
+* New Chat icon pack and category
+* New Charity icon pack and category
+* New Moving icon pack and category
+* New icons hands and hand-holding
+
+### Changed
+* Updated flipboard, readme, and houzz brand icon
+* Making all solid icons in the medical icon pack free
+* Updated hand-holding-box and hand-receiving in the Light style
+
+### Fixed
+* Missing box-sizing CSS property for fa-layers-counter
+
+---
+
+## [5.0.8](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.8)  - 2018-03-01
+
+### Fixed
+* OTF font files missing ligatures for Pro styles FortAwesome/Font-Awesome#12486 FortAwesome/Font-Awesome-Pro#1034
+
+---
+
+## [5.0.7](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.7)  - 2018-02-26
+
+### Added
+* New Logistics category
+* New Medical category
+* Individual SVG files available from the Font Awesome CDN
+* Additional search terms
+
+### Changed
+* Apple brand icon update FortAwesome/Font-Awesome#12337
+* Disable mutation observers with fontawesome.noAuto() is called
+* License information now references https URL scheme
+
+### Fixed
+* Missing TypeScript names FortAwesome/react-fontawesome#83
+* Adding categories metadata FortAwesome/Font-Awesome#12034
+* TypeScript improvement for fontawesome.layer()
+* Correcting a melting, wobbling, weird-looking whistle
+
+---
+
+## [5.0.6](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.6)  - 2018-01-25
+
+### Fixed
+* @fortawesome/fontawesome-pro-light missing submodules
+
+---
+
+## [5.0.5](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.5)  - 2018-01-25
+
+### Added
+* New Sports category
+* New Chess category
+* Added brand icons for flipboard, php, quinscape, and hips
+
+### Fixed
+* Sass and Less mixin fa-icon() now uses ems instead of percentage
+* Corrected misspelling of &quot;Alternate&quot; in category labels
+* Improved TypeScript definitions for @fortawesome/fontawesome
+* Server-side rendering was failing due to DOM-specific object access
+* SVG attributes &quot;data-fa-processed&quot; renamed to &quot;data-fa-i2svg&quot;, only applies if rendered with i2svg() method
+
+---
+
+## [5.0.4](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.4)  - 2018-01-10
+
+### Changed
+* Updating all NPM package READMEs
+
+### Fixed
+* Improving TypeScript exports and fixing some incorrect definitions
+* TypeScript error when importing entire style Fort-Awesome/Font-Awesome#12072
+* Pseudo-elements erasing text contents in parent container Fort-Awesome/Font-Awesome-Pro#11995
+* fa-layers-text misalignment when using Bootstrap Fort-Awesome/Font-Awesome#11871
+
+---
+
+## [5.0.3](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.3)  - 2018-01-08
+
+### Added
+* Adding elementor, youtube-square brand icons
+* Adding window-minimize to the Free subset
+* TypeScript support for all NPM packages
+
+### Fixed
+* Corrected uneven spacing in university, address-book, address-card, id-badge, id-card, mouse-pointer, phone-volume, portrait, user-alt, user-circle, user-md, user-plus, user-times, user , users
+* Corrected uneven spacing in brand icons behance-square, dashcube, discourse, ember, erlang, fort-awesome, js-square, laravel, mix, patreon, palfed, phoenix-framework, node-js, skyatlas, stack-exchange, stripe, viber, weixin, yahoo , yoast
+
+---
+
+## [5.0.2](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.2)  - 2017-12-19
+
+### Added
+* Adding amazon-pay, cc-amazon-pay, korvue, ethereum brand icons
+* Adding stopwatch to Free version
+
+### Changed
+* Ligatures now support capital case, all caps, and title case
+
+### Fixed
+* NPM packages now behave the same way as CDN and browser-specific packages FortAwesome/Font-Awesome-Pro#727 FortAwesome/Font-Awesome-Pro#896 FortAwesome/Font-Awesome-Pro#891
+* Icon doesn't change when pseudo-element content changes FortAwesome/Font-Awesome-Pro#839
+* Invalid XML in sprites FortAwesome/Font-Awesome-Pro#927
+* Incorrect version in Sass and Less variable files
+
+---
+
+## [5.0.1](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.1)  - 2017-12-08
+
+### Added
+* Adding font-awesome-flag, lock-open, redo-alt, sync-alt, undo-alt to the Free version
+* New NPM packages `fontawesome-free-webfonts` and `fontawesome-pro-webfonts`
+* Adding old icon names to search terms for renamed icons
+* Extensive metadata added to the `advanced-options` directory
+* Adding stripe-s brand icon
+* Adding typo3 brand icon
+
+### Changed
+* Updated dropbox brand icon to match new branding guidelines
+* Updated firefox brand icon
+* Updated strava brand icon
+* OTF font file now include a space character
+
+### Fixed
+* OTF font file now supports different styles in Windows
+* OTF font file &quot;j&quot; character now has correct space on the right
+* Modifying the `class` attribute on an existing `&lt;svg&gt;` allows you to change the icon
+
+---
+
+## [5.0.0](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0)  - 2017-12-01
+
+### Added
+* License information
+
+### Changed
+* CSS vertical-align now &quot;em&quot;-based instead of percentage making it more consistent
+* fa-ul width now closer to default browser size
+
+---
+
+## [5.0.0-rc5](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-rc5)  - 2017-11-28
+
+**This release includes breaking changes**
+
+### Added
+* Brand icons: gitter, cc-stripe, stripe, hooli, aviato, strava, ember, angular, font-awesome-flag
+* Icons compress-alt and expand-alt
+* Adding calendar to Font Awesome 5 Free
+* SASS function that makes it easier to use variables FortAwesome/Font-Awesome-Pro#824
+
+### Changed
+* BREAKING Renamed icon composition to mask (&quot;data-fa-compose&quot; becomes &quot;data-fa-mask&quot;)
+* BREAKING Re-organized directory structure to match upcoming documentation
+* BREAKING Font Awesome styles inserted into the `&lt;head&gt;` will now precede other link and style definitions
+* BREAKING `fontawesome.text` and `fontawesome.icon` now use `styles` param instead of `style`
+* Updated sizing for twitter, discord, youtube
+* Class fa-li now respects line-height and has new recommended markup (see included docs)
+
+### Fixed
+* Duplicate `style` tags being added in the head FortAwesome/Font-Awesome-Pro#858
+* Error with icon composition/masking that caused a confusing error message
+* An error when using pseudo elements and the element is empty (Array.reduce error)
+* Icons not being replaced with SVG if the text content is not empty
+
+---
+
+## [5.0.0-rc4](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-rc4)  - 2017-10-27
+
+### Added
+* Ligature support in the OTF font
+* Vue.js brand icon
+* Sass and Less brand icons
+* Autoprefixer brand icon
+* Individual icon imports in icon packages FortAwesome/Font-Awesome-Pro#808
+
+### Changed
+* Better poo eyes
+* Renamed HTML status classes to `fontawesome-i2svg-active`, `fontawesome-i2svg-pending`, `fontawesome-i2svg-complete`
+* HTML status class for active is added only after the first batch of icon replacements occur
+* Added mention of newer versions of iOS in documentation FortAwesome/Font-Awesome-Pro#810
+
+### Fixed
+* Performance and missing features with mutation observer (should fix FortAwesome/Font-Awesome-Pro#813)
+* Incorrect handling of icon class and style attributes when using autoReplace = 'nest' FortAwesome/Font-Awesome-Pro#809
+* Pseudo elements not added or removed when class mutations occur FortAwesome/Font-Awesome-Pro#821
+
+---
+
+## [5.0.0-rc3](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-rc3)  - 2017-10-13
+
+### Added
+* Node.js brand icon FortAwesome/Font-Awesome-Pro#779
+* React brand icon FortAwesome/Font-Awesome-Pro#780
+* OSI brand icon FortAwesome/Font-Awesome-Pro#748
+* Add a class to the html element when icon replacement is complete FortAwesome/Font-Awesome-Pro#778
+* Add support for symbols in API including ability to name the symbol
+* Use CSS pseudo elements (:before and :after) to make trigger SVG replacements
+
+### Changed
+* Switched the locations of fork and knife in utensils-alt FortAwesome/Font-Awesome-Pro#466
+* Updated the AWS brand icon FortAwesome/Font-Awesome-Pro#735
+* Updated Apple App Store icon FortAwesome/Font-Awesome-Pro#728
+
+### Fixed
+* Do not throw an error if icon is missing when calling icon() method in API
+* Ensure that unicode values do not change between releases
+* Version field is missing in fontawesome-pro-brands/package.json FortAwesome/Font-Awesome-Pro#781
+* Repeated commenting out of fa-layers when i2svg is called FortAwesome/Font-Awesome-Pro#788
+* Title not showing up correctly for SVG FortAwesome/Font-Awesome-Pro#786
+
+---
+
+## [5.0.0-rc2](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-rc2)  - 2017-09-22
+
+### Added
+* Brand icons: accusoft, ns8, uniregistry
+
+### Fixed
+* Link to the npm package in the docs FortAwesome/Font-Awesome-Pro#729
+* Incorrect reference to fontawesome-pro.js in docs
+
+---
+
+## [5.0.0-rc1](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-rc1)  - 2017-09-15
+
+### Changed
+* New Bitbucket logo FortAwesome/Font-Awesome-Pro#720
+* Modifed the star icons to match use case better FortAwesome/Font-Awesome-Pro#710
+* Switched names of css3 and css3-alt to reflect correct branding
+
+### Fixed
+* Correct whitespace with the Visa logo FortAwesome/Font-Awesome-Pro#719
+* Improve OTF support by passing through FontForge FortAwesome/Font-Awesome-Pro#565
+* Fonts with &quot;undefined&quot; name FortAwesome/Font-Awesome-Pro#711
+* Shims will only function if using old prefix of &quot;fa&quot; FortAwesome/Font-Awesome-Pro#692
+* Added missing &quot;youtube&quot; icon to categories
+
+---
+
+## [5.0.0-beta7](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta7)  - 2017-09-11
+
+### Added
+* Ability to nest the `&lt;svg&gt;` tag within the `&lt;i&gt;` FortAwesome/Font-Awesome-Pro#624
+* Define icons as symbols and leverage SVG sprites FortAwesome/Font-Awesome-Pro#629
+* Added alternative CSS3 logo FortAwesome/Font-Awesome-Pro#682
+
+### Changed
+* Power Transforms now execute inside the SVG instead of on the root element
+* Filenames have changed to reflect a better division between Font Awesome Free and Pro
+
+### Fixed
+* More improvements to the version 4 shim FortAwesome/Font-Awesome-Pro#673 FortAwesome/Font-Awesome-Pro#678 FortAwesome/Font-Awesome-Pro#686 FortAwesome/Font-Awesome-Pro#687 FortAwesome/Font-Awesome-Pro#692
+* Animation support for inline SVG now works as expected FortAwesome/Font-Awesome-Pro#662
+
+---
+
+## [5.0.0-beta6](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta6)  - 2017-09-01
+
+### Added
+* Ability to flip horizontal and vertical with CSS classes fa-flip-horizontal and fa-flip-vertical
+* New film-alt icon that allows for layering other icons
+* Microsoft brand
+
+### Changed
+* New YouTube branding FortAwesome/Font-Awesome-Pro#646
+
+### Fixed
+* Fixed a bunch of shim-related issues
+* Cogs off center FortAwesome/Font-Awesome-Pro#663
+* Corrected icons/categories.yml with canonical names
+
+---
+
+## [5.0.0-beta5](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta5)  - 2017-08-25
+
+### Added
+* Full parity with Font Awesome 4! 616 total core icons in each style
+* 297 total brand and logo icons
+* Separate CSS file to accompany the SVG Framework FortAwesome/Font-Awesome-Pro#627
+* Alternative to the dots icon FortAwesome/Font-Awesome-Pro#608
+* Made window icons consistent FortAwesome/Font-Awesome-Pro#611
+
+### Fixed
+* Production builds not correctly being detected FortAwesome/Font-Awesome-Pro#631
+
+---
+
+## [5.0.0-beta4](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta4)  - 2017-08-18
+
+### Added
+* 590 total core icons in each style
+* 291 total brand and logo icons
+
+### Fixed
+* Reduced the size of JS file from 66 to 22 kb
+* Regression caused by with web font alignment FortAwesome/Font-Awesome-Pro#460
+
+---
+
+## [5.0.0-beta3](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta3)  - 2017-08-15
+
+### Added
+* 583 total core icons in each style
+
+### Fixed
+* Documentation improvements and fixes FortAwesome/Font-Awesome-Pro#586
+* Vertical alignment of TTF and OTF fonts FortAwesome/Font-Awesome-Pro#460
+* The &quot;fa_500px&quot; icon should be named &quot;fa500px&quot; FortAwesome/Font-Awesome-Pro#578
+
+---
+
+## [5.0.0-beta2](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta2)  - 2017-08-11
+
+### Added
+* 570 total core icons in each style
+* 291 total brand and logo icons
+* NPM (ES6, CommonJS, AMD) packages for use with other JavaScript libraries and tools FortAwesome/Font-Awesome-Pro#574
+* Added a guide to choosing which implementation is best for you FortAwesome/Font-Awesome-Pro#532
+
+### Changed
+* Showing a missing icon is now configurable FortAwesome/Font-Awesome-Pro#569
+
+### Fixed
+* Composition framework now works in browsers that do not support transform-origin FortAwesome/Font-Awesome-Pro#564
+
+---
+
+## [5.0.0-beta1](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-beta1)  - 2017-08-04
+
+### Added
+* 524 total core icons in each style
+* 289 total brand and logo icons
+* New composition framework FortAwesome/Font-Awesome-Pro#537
+* Animated indicator if you use an icon that does not exist
+
+### Changed
+* Basic linting for Sass and Less files
+* Add JavaScript guard block to prevent leaking errors
+* Add support for automatic accessibility to SVG Framework Layers
+
+### Fixed
+* Regression where stacks and pulled and bordered were not working in SVG Framework
+* SVG sprite example had confusing inline styles FortAwesome/Font-Awesome-Pro#549
+* Make getting started page more consistent between examples FortAwesome/Font-Awesome-Pro#544
+* Added missing sizes fa-[6-10], xs, sm FortAwesome/Font-Awesome-Pro#546
+* Title tag missing in SVG sprites FortAwesome/Font-Awesome-Pro#536
+
+---
+
+## [5.0.0-alpha7](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha7)  - 2017-07-28
+
+### Added
+* 451 total core icons in each style
+* 281 total brand and logo icons
+* Less support is back!
+* OpenType (.otf) file formats for web fonts
+
+### Changed
+* Changes the fa-spin animation to go from 0deg to 360deg to eliminate hitch FortAwesome/Font-Awesome-Pro#522
+* Improved mutation handling FortAwesome/Font-Awesome-Pro#517
+
+### Fixed
+* fa-fw now works correctly with the SVG framework FortAwesome/Font-Awesome-Pro#530
+* Removed execute bit on some icon files FortAwesome/Font-Awesome-Pro#520
+
+---
+
+## [5.0.0-alpha6](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha6)  - 2017-07-21
+
+### Added
+* 410 total core icons in each style
+* 270 total brand and logo icons
+* All new Font Awesome 4 shim file
+* Beginnings of a public JS API FortAwesome/Font-Awesome-Pro#512
+
+### Changed
+* Added Firefox ESR and Chrome for Businesses to browser compatibility FortAwesome/Font-Awesome-Pro#506
+
+### Fixed
+* Ensure that SVG title attributes are unique
+* Fixed incorrect viewBox sizes FortAwesome/Font-Awesome-Pro#492
+* Fix chart-area alignment in the solid style FortAwesome/Font-Awesome-Pro#508
+* Add missing xmlns attributes in some SVGs FortAwesome/Font-Awesome-Pro#509
+
+---
+
+## [5.0.0-alpha5](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha5)  - 2017-07-14
+
+### Added
+* 228 total brand and logo icons
+* New transform framework for sizing, moving, rotating, and flipping icons
+* New icon counters
+* New layers framework
+* New text overlays
+* Auto-comments with the original source icons alongside SVG replacements
+
+### Changed
+* Autoprefixer to correctly add browser prefixes for supported browsers
+* Removed browser-specific CSS properties in Sass source files (now relies on autoprefixer)
+
+### Fixed
+* The rotation on checkmark icons
+* Other icon feedback from previous weeks
+* Correct fixed width settings to 1.25em (based on the new 16px grid)
+* Icons displaying as block instead of inline-block in IE and older Safari
+
+---
+
+## [5.0.0-alpha4](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha4)  - 2017-07-07
+
+### Added
+* 93 brand icons
+
+---
+
+## [5.0.0-alpha3](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha3)  - 2017-06-30
+
+### Added
+* 95 additional icons; including file types, directional, and some existing and new brand icons
+
+### Fixed
+* Wrong content type in generated CSS FortAwesome/Font-Awesome-Pro#458
+* Removal of query string from static resources FortAwesome/Font-Awesome-Pro#458
+* SVG font ID's are incorrect in webfont implementation FortAwesome/Font-Awesome-Pro#474
+
+---
+
+## [5.0.0-alpha2](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha2)  - 2017-06-27
+
+### Added
+* How/When to upgrade from FA4 to FA5 FortAwesome/Font-Awesome-Pro#454
+
+### Fixed
+* Links to SVG files broken in the example files FortAwesome/Font-Awesome-Pro#456
+* Misnamed icon names in examples FortAwesome/Font-Awesome-Pro#445
+* Mangled HTML in the Getting Started example FortAwesome/Font-Awesome-Pro#442
+* Bad grammar and typos FortAwesome/Font-Awesome-Pro#443
+* fas-arrow-to-top is identical to fas-arrow-to-right FortAwesome/Font-Awesome-Pro#423
+* Vertical alignment issues with webfont implementation FortAwesome/Font-Awesome-Pro#444
+* Add browser compatibility tables to demo FortAwesome/Font-Awesome-Pro#435
+* Remove MAC OS feces from builds FortAwesome/Font-Awesome-Pro#437
+* TTF naming issues that prevent correct usage/installation FortAwesome/Font-Awesome-Pro#450
+* Correct CSS for SVG framework stacking, was reversed from normal FortAwesome/Font-Awesome-Pro#452
+
+---
+
+## [5.0.0-alpha1](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.0-alpha1)  - 2017-06-23
+
+### Added
+* 300+ more icons
+* Brands pack
+* New JavaScript based SVG Framework
+* New SVG Sprites based framework
+* Source SVGs
+* Documentation with a convenient build-in web server
+
+### Changed
+* New directory structure
+</description>
+            <link>/assets/bower_components/font-awesome/CHANGELOG/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Upgrading Guide</title>
+            <description># Upgrading Guide
+
+See the [CHANGELOG.md](/assets/bower_components/font-awesome/CHANGELOG/) for detailed information about what has changed between versions.
+
+This guide is useful to figure out what you need to do between breaking changes.
+
+As always, [submit issues](https://github.com/FortAwesome/Font-Awesome/issues/new) that you run into with this guide or with these upgrades to us.
+
+## 5.0.x to 5.1.0
+
+### New packages available for browser-only integration
+
+**If you were previously using @fortawesome/fontawesome you need to switch to one of the new packages.**
+
+Our Free and Pro CDN provide access to JS, CSS, sprites, and separate SVG files.
+
+We've now made these files conveniently available through NPM.
+
+* [@fortawesome/fontawesome-free](https://www.npmjs.com/package/@fortawesome/fontawesome-free)
+* @fortawesome/fontawesome-pro (private package, requires Pro subscription)
+
+If you are familiar with the paths and options available with the CDN these
+packages should be familiar.
+
+Information about [Font Awesome Pro subscriptions](https://fontawesome.com/pro)
+can be found in your [Font Awesome awesome
+account](https://fontawesome.com/account/services).
+
+### Renamed packages
+
+The following packages have been renamed as part of 5.1.0 of Font Awesome.
+
+_All packages are in the [@fortawesome NPM scope](https://www.npmjs.com/search?q=scope:fortawesome&amp;page=1&amp;ranking=optimal)_
+
+| Old package(1)            | New package            |
+|---------------------------|------------------------|
+| fontawesome-free-webfonts | fontawesome-free       |
+| fontawesome-pro-webfonts  | fontawesome-pro        |
+| fontawesome-free-solid    | free-solid-svg-icons   |
+| fontawesome-free-regular  | free-regular-svg-icons |
+| fontawesome-free-brands   | free-brands-svg-icons  |
+| fontawesome-pro-solid     | pro-solid-svg-icons    |
+| fontawesome-pro-regular   | pro-regular-svg-icons  |
+| fontawesome-pro-light     | pro-light-svg-icons    |
+
+(1) Old packages have now been deprecated. They are still available but will only receive high priority patch release fixes.
+
+**You'll need to update your package.json file with the renamed packages and new versions.**
+
+### No more default imports
+
+Recently we spent a good deal of time supporting TypeScript to enable us to
+create the Angular Font Awesome component. During that adventure we
+[were](https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html)
+[convinced](https://blog.neufund.org/why-we-have-banned-default-exports-and-you-should-do-the-same-d51fdc2cf2ad)
+that we were going to remove default exports from all of our components,
+libraries, and packages. This is complete with the umbrella release of `5.1.0` of Font Awesome.
+
+What does that mean?
+
+~~Old way:~~
+
+```javascript
+import fontawesome from '@fortawesome/fontawesome'
+import solid from '@fortawesome/fontawesome-free-solid'
+import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+
+library.add(solid, faTwitter)
+```
+
+New way:
+
+```javascript
+import { library, dom } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(fas, faTwitter)
+
+// Kicks off the process of finding &lt;i&gt; tags and replacing with &lt;svg&gt;
+dom.watch()
+```
+
+This is also a valid way to import icons that works if your tool does not support tree shaking:
+
+```javascript
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+```
+
+### Improved support for tree shaking
+
+Tree shaking is now functional by default and no additional configuration is required to make it work.
+
+The `shakable.es.js` module has been removed and is no longer needed.
+
+If you've previously configured tree shaking by modifying your webpack or rollup you can safely remove these.
+
+**We recommend that you check your bundle size after upgrading an ensure that file sizes are as you would expect.**
+
+```javascript
+module.exports = {
+  // ...
+  resolve: {
+    alias: {
+      '@fortawesome/fontawesome-free-solid$': '@fortawesome/fontawesome-free-solid/shakable.es.js'
+    }
+  }
+}
+```
+
+```javascript
+const alias = require('rollup-plugin-alias')
+
+rollup({
+  // ...
+  plugins: [
+    alias({
+      '@fortawesome/fontawesome-free-solid': 'node_modules/@fortawesome/fontawesome-free-solid/shakable.es.js'
+    })
+  ]
+})
+```
+
+## 5.0.11 to 5.0.12
+
+Due to a collision with the &quot;r&quot; glyph the R Project brand icon has been renamed to `r-project`.
+
+## 5.0.x to 5.0.6
+
+### SVG Attribute was changed from data-fa-processed to data-fa-i2svg
+
+As part of a bug fix for the release of 5.0.6 we renamed an attribute that was found on `&lt;svg&gt;` elements from
+`data-fa-processed` to `data-fa-i2svg`. We feel this more accurately reflects the intent and purpose.
+
+This attribute is added to any icon that has been generated using `fontawesome.dom.i2svg()`.
+
+Be aware that `data-fa-i2svg` (or `data-fa-processed`) will no longer be present on icons that are created using
+`fontawesome.icon()`.
+
+If you've written and DOM queries that rely on `data-fa-processed` you should get things working again by doing a
+simple find and replace.
+</description>
+            <link>/assets/bower_components/font-awesome/UPGRADING/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Mouse Wheel ChangeLog</title>
+            <description># Mouse Wheel ChangeLog
+
+## 3.1.13
+
+* Update copyright notice and license to remove years
+* Create the correct compressed version
+* Remove the obsolete jQuery Plugin Registry file
+
+## 3.1.12
+
+* Fix possible 0 value for line height when in delta mode 1
+
+## 3.1.11
+
+* Fix version number for package managers...
+
+## 3.1.10
+
+* Fix issue with calculating line height when using older versions of jQuery
+* Add offsetX/Y normalization with setting to turn it off
+* Cleans up data on teardown
+
+## 3.1.9
+
+* Fix bower.json file
+* Updated how the deltas are adjusted for older mousewheel based events that have deltas that are factors of 120.
+* Add $.event.special.mousewheel.settings.adjustOldDeltas (defaults to true) to turn off adjusting of old deltas that are factors of 120. You'd turn this off if you want to be as close to native scrolling as possible.
+
+## 3.1.8
+
+* Even better handling of older browsers that use a wheelDelta based on 120
+* And fix version reported by `$.event.special.mousewheel`
+
+## 3.1.7
+
+* Better handle the `deltaMode` values 1 (lines) and 2 (pages)
+* Attempt to better handle older browsers that use a wheelDelta based on 120
+
+## 3.1.6
+
+* Deprecating `delta`, `deltaX`, and `deltaY` event handler arguments
+* Update actual event object with normalized `deltaX `and `deltaY` values (`event.deltaX`, `event.deltaY`)
+* Add `deltaFactor` to the event object (`event.deltaFactor`)
+* Handle `&gt; 0` but `&lt; 1` deltas better
+* Do not fire the event if `deltaX` and `deltaY` are `0`
+* Better handle different devices that give different `lowestDelta` values
+* Add `$.event.special.mousewheel.version`
+* Some clean up
+
+## 3.1.5
+
+* Bad release because I did not update the new `$.event.special.mousewheel.version`
+
+## 3.1.4
+
+* Always set the `deltaY`
+* Add back in the `deltaX` and `deltaY` support for older Firefox versions
+
+## 3.1.3
+
+* Include `MozMousePixelScroll` in the to fix list to avoid inconsistent behavior in older Firefox
+
+## 3.1.2
+
+* Include grunt utilities for development purposes (jshint and uglify)
+* Include support for browserify
+* Some basic cleaning up
+
+## 3.1.1
+
+* Fix rounding issue with deltas less than zero
+
+
+## 3.1.0
+
+* Fix Firefox 17+ issues by using new wheel event
+* Normalize delta values
+* Adds horizontal support for IE 9+ by using new wheel event
+* Support AMD loaders
+
+
+## 3.0.6
+
+* Fix issue with delta being 0 in Firefox
+
+
+## 3.0.5
+
+* jQuery 1.7 compatibility
+
+
+## 3.0.4
+
+* Fix IE issue
+
+
+## 3.0.3
+
+* Added `deltaX` and `deltaY` for horizontal scrolling support (Thanks to Seamus Leahy)
+
+
+## 3.0.2
+
+* Fixed delta being opposite value in latest Opera
+* No longer fix `pageX`, `pageY` for older Mozilla browsers
+* Removed browser detection
+* Cleaned up the code
+
+
+## 3.0.1
+
+* Bad release... creating a new release due to plugins.jquery.com issue :(
+
+
+## 3.0
+
+* Uses new special events API in jQuery 1.2.2+
+* You can now treat `mousewheel` as a normal event and use `.bind`, `.unbind` and `.trigger`
+* Using jQuery.data API for expandos
+
+
+## 2.2
+
+* Fixed `pageX`, `pageY`, `clientX` and `clientY` event properties for Mozilla based browsers
+
+
+## 2.1.1
+
+* Updated to work with jQuery 1.1.3
+* Used one instead of bind to do unload event for clean up
+
+
+## 2.1
+
+* Fixed an issue with the unload handler
+
+
+## 2.0
+
+* Major reduction in code size and complexity (internals have change a whole lot)
+
+
+## 1.0
+
+* Fixed Opera issue
+* Fixed an issue with children elements that also have a mousewheel handler
+* Added ability to handle multiple handlers
+</description>
+            <link>/assets/bower_components/jquery-mousewheel/ChangeLog/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>matchesSelector helper</title>
+            <description># matchesSelector helper
+
+[`matches`/`matchesSelector`](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches) is pretty hot :fire:, but has [vendor-prefix baggage](http://caniuse.com/#feat=matchesselector) :handbag: :pouch:. This helper function takes care of that, without polyfilling or augmenting `Element.prototype`.
+
+``` js
+matchesSelector( elem, selector );
+// for example
+matchesSelector( myElem, 'div.my-hawt-selector' );
+```
+
+## Install
+
+Download [matches-selector.js](https://github.com/desandro/matches-selector/raw/master/matches-selector.js)
+
+Install with [Bower](http://bower.io): `bower install matches-selector`
+
+[Install with npm](https://www.npmjs.org/package/desandro-matches-selector): `npm install desandro-matches-selector`
+
+## Browser support
+
+IE10+, all modern browsers
+
+Use [matchesSelector v1](https://github.com/desandro/matches-selector/releases/tag/v1.0.3) for IE8 and IE9 support.
+
+## MIT license
+
+matchesSelector is released under the [MIT license](http://desandro.mit-license.org)
+</description>
+            <link>/assets/bower_components/desandro-matches-selector/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>EvEmitter</title>
+            <description># EvEmitter
+
+_Lil' event emitter_ — add a little pub/sub
+
+EvEmitter adds publish/subscribe pattern to a browser class. It's a smaller version of [Olical/EventEmitter](https://github.com/Olical/EventEmitter). That EventEmitter is full featured, widely used, and great. This EvEmitter has just the base event functionality to power the event API in libraries like [Isotope](http://isotope.metafizzy.co), [Flickity](http://flickity.metafizzy.co), [Masonry](http://masonry.desandro.com), and [imagesLoaded](http://imagesloaded.desandro.com).
+
+## API
+
+``` js
+// Inherit prototype, IE8+
+MyClass.prototype = new EvEmitter();
+
+// Inherit prototype, IE9+
+MyClass.prototype = Object.create( EvEmitter.prototype );
+
+// Mixin prototype
+_.extend( MyClass.prototype, EvEmitter.prototype );
+
+// single instance
+var emitter = new EvEmitter();
+```
+
+### on
+
+Add an event listener.
+
+``` js
+emitter.on( eventName, listener )
+```
+
++ `eventName` - _String_ - name of the event
++ `listener` - _Function_
+
+### off
+
+Remove an event listener.
+
+``` js
+emitter.off( eventName, listener )
+```
+
+### once
+
+Add an event listener to be triggered only once.
+
+``` js
+emitter.once( eventName, listener )
+```
+
+### emitEvent
+
+Trigger an event.
+
+``` js
+emitter.emitEvent( eventName, args )
+```
+
++ `eventName` - _String_ - name of the event
++ `args` - _Array_ - arguments passed to listeners
+
+### allOff
+
+Removes all event listeners.
+
+``` js
+emitter.allOff()
+```
+
+## Code example
+
+``` js
+// create event emitter
+var emitter = new EventEmitter();
+
+// listeners
+function hey( a, b, c ) {
+  console.log( 'Hey', a, b, c )
+}
+
+function ho( a, b, c ) {
+  console.log( 'Ho', a, b, c )
+}
+
+function letsGo( a, b, c ) {
+  console.log( 'Lets go', a, b, c )
+}
+
+// bind listeners
+emitter.on( 'rock', hey )
+emitter.once( 'rock', ho )
+// trigger letsGo once
+emitter.on( 'rock', letsGo )
+
+// emit event
+emitter.emitEvent( 'rock', [ 1, 2, 3 ] )
+// =&gt; 'Hey', 1, 2, 3
+// =&gt; 'Ho', 1, 2, 3
+// =&gt; 'Lets go', 1, 2, 3
+
+// unbind
+emitter.off( 'rock', ho )
+
+emitter.emitEvent( 'rock', [ 4, 5, 6 ] )
+// =&gt; 'Hey' 4, 5, 6
+```
+
+## License
+
+EvEmitter is released under the [MIT License](http://desandro.mit-license.org/). Have at it.
+</description>
+            <link>/assets/bower_components/ev-emitter/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Fizzy UI utils</title>
+            <description># Fizzy UI utils
+
+UI utility &amp; helper functions
+
+Used in [Flickity](http://flickity.metafizzy.co), [Isotope](http://isotope.metafizzy.co), [Masonry](http://masonry.desandro.com), [Draggabilly](http://draggabilly.desandro.com)
+
+## Install
+
+Bower: `bower install fizzy-ui-utils --save`
+
+npm: `npm install fizzy-ui-utils --save`
+
+## API
+
+``` js
+// fizzyUIUtils is the browser global
+var utils = fizzyUIUtils;
+
+// ---- ---- //
+
+utils.extend( a, b )
+// extend object
+
+utils.modulo( num, div )
+// num [modulo] div
+
+utils.makeArray( obj )
+// make array from object
+
+utils.removeFrom( ary, obj )
+// remove object from array
+
+utils.getParent( elem, selector )
+// get parent element of an element, given a selector string
+
+utils.getQueryElement( elem )
+// if elem is a string, use it as a selector and return element
+
+Class.prototype.handleEvent = utils.handleEvent;
+// enable Class.onclick when element.addEventListener( 'click', this, false )
+
+utils.filterFindElements( elems, selector )
+// iterate through elems, filter and find all elements that match selector
+
+utils.debounceMethod( Class, methodName, threhold )
+// debounce a class method
+
+utils.docReady( callback )
+// trigger callback on document ready
+
+utils.toDashed( str )
+// 'camelCaseString' -&gt; 'camel-case-string'
+
+utils.htmlInit( Class, namespace )
+// on document ready, initialize Class on every element
+// that matches js-namespace
+// pass in JSON options from element's data-options-namespace attribute
+```
+
+---
+
+[MIT license](http://desandro.mit-license.org/). Have at it.
+
+By [Metafizzy](http://metafizzy.co)
+</description>
+            <link>/assets/bower_components/fizzy-ui-utils/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title></title>
+            <description>&lt;h1&gt;&lt;img src=&quot;https://img.fortawesome.com/349cfdf6/logo-fa-free.svg&quot; alt=&quot;Font Awesome 5 Free&quot; width=&quot;50%&quot;&gt;&lt;/h1&gt;
+
+&gt; Version 5 – the iconic SVG, font, and CSS framework
+
+The internet's most popular icon toolkit has been redesigned and built from
+scratch. On top of this, features like icon font ligatures, an SVG framework,
+official NPM packages for popular frontend libraries like React, and access to
+a new CDN.
+
+Not familiar with Font Awesome 5? [Learn
+more](https://www.kickstarter.com/projects/232193852/font-awesome-5) about our
+successful Kickstarter and plan. You can also **[order Font Awesome
+Pro](https://fontawesome.com/pro)** which includes tons more icons directly
+from [fontawesome.com](https://fontawesome.com).
+
+## Get started with 5!
+
+Learn how to [get started](https://fontawesome.com/get-started) with Font Awesome or dive deeper into [other topics](https://fontawesome.com/how-to-use).
+
+* [SVG with JS](https://fontawesome.com/how-to-use/svg-with-js)
+* [Web Fonts with CSS](https://fontawesome.com/how-to-use/web-fonts-with-css)
+* [Use on the Desktop](https://fontawesome.com/how-to-use/use-on-desktop)
+* [Use with Node.js](https://fontawesome.com/how-to-use/use-with-node-js)
+* [JS Component Packages](https://fontawesome.com/how-to-use/js-component-packages)
+* [SVG Sprites](https://fontawesome.com/how-to-use/svg-sprites)
+* [Upgrading from Version 4](https://fontawesome.com/how-to-use/upgrading-from-4)
+* [Server Side Rendering](https://fontawesome.com/how-to-use/server-side-rendering)
+* [Font Awesome API](https://fontawesome.com/how-to-use/font-awesome-api)
+* [Performance and Security](https://fontawesome.com/how-to-use/performance-and-security)
+* [Accessibility](https://fontawesome.com/how-to-use/accessibility)
+
+### Where did Font Awesome 4 (or 3) go?
+
+Now that Font Awesome 5 has been released we are marking version 4 as
+end-of-life. We don't plan on releasing any further versions of the 4.x or 3.x.
+
+Documentation is still available but it's moved to
+[https://fontawesome.com/v4.7.0](https://fontawesome.com/v4.7.0) and
+[https://fontawesome.com/v3.2.1](https://fontawesome.com/v3.2.1).
+
+The Git repository for
+[v4.7.0](https://github.com/FortAwesome/Font-Awesome/releases/tag/v4.7.0) and
+[v3.2.1](https://github.com/FortAwesome/Font-Awesome/releases/tag/v3.2.1) can
+be found in our GitHub releases.
+
+## Change log
+
+We'll keep track of each release in the [CHANGELOG.md](/assets/bower_components/font-awesome/CHANGELOG/)
+
+Looking for older versions of Font Awesome? Check the [releases](https://github.com/FortAwesome/Font-Awesome/releases).
+
+## Upgrading
+
+From time-to-time we'll have special upgrading instructions from one version to the next.
+
+Check out the [UPGRADING.md](/assets/bower_components/font-awesome/UPGRADING/) guide when you upgrade your dependencies.
+
+## Code of conduct
+
+We will behave ourselves if you behave yourselves. For more details see our
+[CODE_OF_CONDUCT.md](/assets/bower_components/font-awesome/CODE_OF_CONDUCT.md).
+
+## Contributing
+
+Please read through our [contributing guidelines](/assets/bower_components/font-awesome/CONTRIBUTING.md).  Included
+are directions for opening issues.
+
+## Versioning
+
+Font Awesome will be maintained under the Semantic Versioning guidelines as much as possible. Releases will be numbered
+with the following format:
+
+`&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;`
+
+For more information on SemVer, please visit http://semver.org.
+
+**The major version &quot;5&quot; is part of an umbrella release.  It includes many different types of files and technologies. Therefore
+we deviate from normal SemVer in the following ways:**
+
+* Any release may update the design, look-and-feel, or branding of an existing
+  icon
+* We will never intentionally release a `patch` version update that breaks
+  backward compatibility
+* A `minor` release **may include backward-incompatible changes** but we will
+  write clear upgrading instructions in UPGRADING.md
+* A `minor` or `patch` release will never remove icons
+* Bug fixes will be addressed as `patch` releases unless they include backward
+  incompability then they will be `minor` releases
+
+## License
+
+Font Awesome Free is free, open source, and GPL friendly. You can use it for
+commercial projects, open source projects, or really almost whatever you want.
+
+- Icons — CC BY 4.0 License
+  - In the Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.
+- Fonts — SIL OFL 1.1 License
+  - In the Font Awesome Free download, the SIL OLF license applies to all icons packaged as web and desktop font files.
+- Code — MIT License
+  - In the Font Awesome Free download, the MIT license applies to all non-font and non-icon files.
+
+Attribution is required by MIT, SIL OLF, and CC BY licenses. Downloaded Font
+Awesome Free files already contain embedded comments with sufficient
+attribution, so you shouldn't need to do anything additional when using these
+files normally.
+
+We've kept attribution comments terse, so we ask that you do not actively work
+to remove them from files, especially code. They're a great way for folks to
+learn about Font Awesome.
+
+## Team
+
+* [Dave Gandy](https://github.com/davegandy)
+* [Travis Chase](https://github.com/supercodepoet)
+* [Rob Madole](https://github.com/robmadole)
+* [Brian Talbot](https://github.com/talbs)
+* [Jory Raphael](https://github.com/sensibleworld)
+* [Mike Wilkerson](https://github.com/mlwilkerson)
+* [Geremia Taglialatela](https://github.com/tagliala)
+</description>
+            <link>/assets/bower_components/font-awesome/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-common-types - SVG with JavaScript</title>
+            <description># @fortawesome/fontawesome-common-types - SVG with JavaScript
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-common-types.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-common-types)
+
+## What is this package?
+
+Font Awesome 5 JavaScript packages support TypeScript. This package abstracts out some of the common definitions that those packages use.
+
+## Here be dragons
+
+If you are trying to import types from this package we *highly* recommend you do the following instead as *all types in this package are re-exported to the main fontawesome package*.
+
+your.ts
+
+```
+import {
+  IconName
+} from `@fortawesome/fontawesome`
+
+const myIcon: IconName = &quot;...&quot;
+```
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-common-types/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-free-brands - SVG with JavaScript version</title>
+            <description># @fortawesome/fontawesome-free-brands - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-free-brands.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-free-brands)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-free-brands
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-free-brands
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-free-regular - SVG with JavaScript version</title>
+            <description># @fortawesome/fontawesome-free-regular - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-free-regular.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-free-regular)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-free-regular
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-free-regular
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-free-solid - SVG with JavaScript version</title>
+            <description># @fortawesome/fontawesome-free-solid - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-free-solid.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-free-solid)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-free-solid
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-free-solid
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-free-webfonts - Web Fonts with CSS version</title>
+            <description># @fortawesome/fontawesome-free-webfonts - Web Fonts with CSS version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-free-webfonts.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-free-webfonts)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-free-webfonts
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-free-webfonts
+```
+
+## What is this package?
+
+This package includes CSS, Less, SCSS, and the individual web font files needed to get Font Awesome 5 Web Fonts with CSS working in your freeject.
+
+Inside `node_modules/@fortawesome/fontawesome-free-webfonts` you'll find the following directories:
+
+* `css`
+* `less`
+* `scss`
+* `webfonts`
+
+It's up to you to configure your build tool to use these.
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/web-fonts-with-css). Continue your journey [here](https://fontawesome.com/how-to-use/web-fonts-with-css).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-free - The Official Font Awesome 5 NPM package</title>
+            <description># @fortawesome/fontawesome-free - The Official Font Awesome 5 NPM package
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-free.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-free)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-free
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-free
+```
+
+## What's included?
+
+**This package includes all the same files available through our Free and Pro CDN.**
+
+* /js - All JavaScript files associated with Font Awesome 5 SVG with JS
+* /css - All CSS using the classic Web Fonts with CSS implementation
+* /sprites - SVG icons packaged in a convenient sprite
+* /scss, /less - CSS Pre-processor files for Web Fonts with CSS
+* /webfonts - Accompanying files for Web Fonts with CSS
+* /svg - Individual icon files in SVG format
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started). Continue your journey [here](https://fontawesome.com/how-to-use).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome-svg-core - SVG with JavaScript version</title>
+            <description># @fortawesome/fontawesome-svg-core - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-svg-core.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome-svg-core
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome-svg-core
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-svg-core/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/fontawesome - SVG with JavaScript version</title>
+            <description># @fortawesome/fontawesome - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/fontawesome
+```
+
+Or
+
+```
+$ yarn add @fortawesome/fontawesome
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>/assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/free-brands-svg-icons - SVG with JavaScript version</title>
+            <description># @fortawesome/free-brands-svg-icons - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/free-brands-svg-icons.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/free-brands-svg-icons)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/free-brands-svg-icons
+```
+
+Or
+
+```
+$ yarn add @fortawesome/free-brands-svg-icons
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>/assets/bower_components/font-awesome/advanced-options/use-with-node-js/free-brands-svg-icons/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/free-regular-svg-icons - SVG with JavaScript version</title>
+            <description># @fortawesome/free-regular-svg-icons - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/free-regular-svg-icons.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/free-regular-svg-icons)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/free-regular-svg-icons
+```
+
+Or
+
+```
+$ yarn add @fortawesome/free-regular-svg-icons
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>/assets/bower_components/font-awesome/advanced-options/use-with-node-js/free-regular-svg-icons/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>@fortawesome/free-solid-svg-icons - SVG with JavaScript version</title>
+            <description># @fortawesome/free-solid-svg-icons - SVG with JavaScript version
+
+&gt; &quot;I came here to chew bubblegum and install Font Awesome 5 - and I'm all out of bubblegum&quot;
+
+[![npm](https://img.shields.io/npm/v/@fortawesome/free-solid-svg-icons.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons)
+
+## Installation
+
+```
+$ npm i --save @fortawesome/free-solid-svg-icons
+```
+
+Or
+
+```
+$ yarn add @fortawesome/free-solid-svg-icons
+```
+
+## Documentation
+
+Get started [here](https://fontawesome.com/get-started/svg-with-js). Continue your journey [here](https://fontawesome.com/how-to-use/svg-with-js).
+
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
+</description>
+            <link>/assets/bower_components/font-awesome/advanced-options/use-with-node-js/free-solid-svg-icons/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>getSize</title>
+            <description># getSize
+
+Get the size of elements. Used in [Masonry](https://masonry.desandro.com), [Isotope](https://isotope.metafizzy.co), &amp;  [Flickity](https://flickity.metafizzy.co). 
+
+``` js
+var size = getSize( elem );
+// elem can be an element
+var size = getSize( document.querySelector('.selector') )
+// elem can be a selector string
+var size = getSize('.selector')
+```
+
+Returns an object with: 
+
++ width, height
++ innerWidth, innerHeight
++ outerWidth, outerHeight
++ paddingLeft, paddingTop, paddingRight, paddingBottom
++ marginLeft, marginTop, marginRight, marginBottom
++ borderLeftWidth, borderTopWidth, borderRightWidth, borderBottomWidth
++ isBorderBox
+
+Browser support: IE10+, Android 4.0+, iOS 5+, and modern browsers
+
+## Install
+
+Install with npm: `npm install get-size`
+
+Install with [Bower](https://bower.io): `bower install get-size`
+
+## Firefox hidden iframe bug
+
+[Firefox has an old bug](https://bugzilla.mozilla.org/show_bug.cgi?id=548397) that occurs within iframes that are hidden with `display: none`. To resolve this, you can use alternate CSS to hide the iframe off-screen, with out `display: none`.
+
+``` css
+.hide-iframe {
+  visibility: hidden;
+  position: absolute;
+  left: -999em;
+}
+```
+
+## MIT License
+
+getSize is released under the [MIT License](https://desandro.mit-license.org/).
+</description>
+            <link>/assets/bower_components/get-size/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title></title>
+            <description>![Version](https://img.shields.io/badge/Version-0.6.0-blue.svg)
+![MinGhostVersion](https://img.shields.io/badge/Min%20Ghost%20v.-%3E%3D%202.10-red.svg)
+
+# ghostHunter
+
+**Original developer:** [jamal@i11u.me](mailto:jamal@i11u.me)
+
+GhostHunter makes it easy to add search capability to any Ghost theme, using the [Ghost API](https://api.ghost.org/v1.14.0/docs) and the [lunr.js](https://lunrjs.com) search engine. Indexing and search are done client-side (in the browser). This has several advantages:
+
+* Searches are private to the user, and are not exposed to third parties.
+* Installation and maintenance of powerful-but-daunting standalone search engines (such as [Solr](http://lucene.apache.org/solr/) or [ElasticSearch](https://www.elastic.co/)) is not required.
+* Instant search (&quot;search-as-you-type&quot; or &quot;typeahead&quot;) is simple to configure.
+
+-----------------
+
+## Contents
+
+   * [ghostHunter](#ghosthunter)
+      * [Contents](#contents)
+      * [Upgrade notes](#upgrade-notes)
+      * [Basic setup](#basic-setup)
+      * [Advanced usage](#advanced-usage)
+         * [Production installation](#production-installation)
+         * [GhostHunter options](#ghosthunter-options)
+         * [Multiple search fields](#multiple-search-fields)
+         * [Clearing search results](#clearing-search-results)
+         * [Indexing and caching: how it works](#indexing-and-caching-how-it-works)
+         * [Development: rebuilding ghostHunter](#development-rebuilding-ghosthunter)
+   * [Footnotes](#footnotes)
+
+------------------
+
+## Upgrade notes
+### GhostHunter v0.6.0
+
+* Implements @JiapengLi &quot;dirty fix&quot; to support the new Ghost v2 Content API.
+* Removes spurious production console.log message.
+* Removes `includepages` option.
+
+
+To use this version of ghostHunter, you'll need to create a Custom Integration and inject its Content API key into your blog header. In your Ghost Settings:
+
+* Go to **Integrations**
+* Choose **Add custom integration**, name it `ghostHunter` and choose **Create**. Copy the generated Content API Key.
+* Go to **Code injection**
+* Add this to **Blog Header**:
+```txt
+&lt;script&gt;
+  var ghosthunter_key = 'PASTE_THE_GENERATED_KEY_HERE';
+  //optional: set your custom ghost_root url, default is `&quot;/ghost/api/v2&quot;`
+  var ghost_root_url = &quot;/ghost/api/v2&quot;
+&lt;/script&gt;
+```
+
+
+### GhostHunter v0.5.1
+
+Breaking change: added a new parameter `includebodysearch`, default `false`. Leaving it `false` completely deactivates searching within post body. Change done for performance reasons for Ghost Pro members.
+
+### GhostHunter v0.4.x → v0.5.0
+
+The local ``lunr.js`` index used by ghostHunter is quick. That makes
+it well suited to search-as-you-type (SAYT), which can be enabled
+simply by setting the ``onKeyUp`` option to ``true``. Although fast
+and convenient, the rapid clearing-and-rewriting of search results in
+SAYT mode can be distracting to the user.
+
+From version 0.5.0, ghostHunter uses a [Levenshtein edit
+distance](https://en.wikipedia.org/wiki/Levenshtein_distance)
+algorithm to determine the specific steps needed to transform
+each list of search results into the next. This produces screen
+updates that are easy on the eye, and even pleasant to watch.
+
+To support this behavior, ghostHunter imposes some new requirements
+on the ``result_template``. If you use this option in your theme,
+you edit the template to satisfy the following requirements
+before upgrading:
+
+   * The template *must* be wrapped in a single outer node (i.e. ``&lt;span&gt;`` or ``div``);
+   * The outer node *must* have a unique ``id`` attribute. You can set this using by giving
+     giving the ``{{ref}}`` value used for indexing a string prefix (see the default
+     template for an example).
+   * The outer node *must* be assigned a class ``gh-search-item``.
+
+That's it. With those changes, your theme should be ready for ghostHunter 0.5.0.
+
+## Basic setup
+
+In your theme directory, navigate to the `assets` subdirectory, &lt;a name=&quot;r1&quot; href=&quot;#f1&quot;&gt;[1]&lt;/a&gt; and clone this repository there: &lt;a name=&quot;r2&quot; href=&quot;#f2&quot;&gt;[2]&lt;/a&gt;
+
+```txt
+  cd assets
+  git clone https://github.com/jamalneufeld/ghostHunter.git --recursive
+```
+
+After cloning, the ghostHunter module will be located at `assets/ghostHunter/dist/jquery.ghosthunter.js`. &lt;a name=&quot;r3&quot; href=&quot;#f3&quot;&gt;[3]&lt;/a&gt; This is a human-readable &quot;raw&quot; copy of the module, and can be loaded directly in your theme templates for testing. (It will run just fine, but it contains a lot of whitespace and comments, and should be &quot;minified&quot; for production use [see below]).
+
+To test the module in your template, add the following line, after JQuery is loaded. Typically this will be near the bottom of a file `default.hbs`, in the top folder of the theme directory.
+
+````html
+&lt;script type=&quot;text/javascript&quot; src=&quot;{{asset &quot;ghostHunter/dist/jquery.ghosthunter.js&quot;}}&quot;&gt;&lt;/script&gt;
+````
+
+You will need to add a search box to your pages. The specific `.hbs` template and location will vary depending on the style and on your design choices, but the HTML will need an `&lt;input&gt;` field and a submit button inside a `&lt;form&gt;` element. A block like this should do the trick:
+
+````html
+&lt;form&gt;
+    &lt;input id=&quot;search-field&quot; /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;search&quot;&gt;
+&lt;/form&gt;
+````
+
+You will also need to mark an area in your pages where the search results should show up:
+
+````html
+&lt;section id=&quot;results&quot;&gt;&lt;/section&gt;
+````
+
+Wake up ghostHunter with a block of JQuery code. For testing, the sample below can be placed in the
+template that loads ghostHunter, immediately after the module is loaded:
+
+````html
+  &lt;script&gt;
+    $(&quot;#search-field&quot;).ghostHunter({
+      results: &quot;#results&quot;
+    });
+  &lt;/script&gt;
+````
+
+Do the necessaries to [load the theme into Ghost](https://themes.ghost.org/v1.17.0/docs/about), and see if it works. :sweat_smile:
+
+
+## Advanced usage
+
+### Production installation
+
+To reduce load times and network traffic, the JavaScript of a site is typically &quot;minified,&quot; bundling all code into a single file with reduced whitespace and other optimizations. The ``jquery.ghosthunter.js`` module should be bundled in this way for the production version of your site. The most common tool for this purpose in Web development is either Grunt or Gulp. A full explanation of their use is beyond the scope of this guide, but here are some links for reference:
+
+* The [Gulp Project](https://gulpjs.com/) website.
+* The [Grunt Project](https://gruntjs.com/) website.
+
+GhostHunter is built using Grunt. Instructions on installing Grunt in order to tweak or extend the code of the ghostHunter module are given in a separate section below.
+
+
+### GhostHunter options
+
+The behavior of ghostHunter can be controlled at two levels. For deep
+changes, &lt;a name=&quot;r4&quot; href=&quot;#f4&quot;&gt;[4]&lt;/a&gt; see the section [Development:
+rebuilding ghostHunter](#development-rebuilding-ghosthunter) below.
+
+For most purposes, ghostHunter offers a set of simple options can be
+set when the plugin is invoked: as an example, the last code sample in
+the previous section sets the `results` option.
+
+:arrow_right: **results**
+
+&gt; Should be set to the JQuery ID of the DOM object into which search results should be inserted. This value is required.
+&gt;
+&gt; Default value is ``undefined``.
+
+:arrow_right: **onKeyUp**
+
+&gt; When set ``true``, search results are returned after each keystroke, for instant search-as-you-type results.
+&gt;
+&gt; Default value is ``false``
+
+:arrow_right: **result_template**
+
+&gt; A simple Handlebars template used to render individual items in the search result. The templates
+&gt; recognize variable substitution only; helpers and conditional insertion constructs are ignored,
+&gt; and will be rendered verbatim.
+&gt;
+&gt; From ghostHunter v0.5.0, the ``result_template`` *must* be assigned a unique``id``, and *must*
+&gt; be assigned a class ``gh-search-item``. Without these attributes, screen updates will not
+&gt; work correctly.
+&gt;
+&gt; Default template is &lt;code&gt;&amp;lt;a id='gh-{{ref}}' class='gh-search-item' href='{{link}}'&amp;gt;&amp;lt;p&amp;gt;&amp;lt;h2&amp;gt;{{title}}&amp;lt;/h2&amp;gt;&amp;lt;h4&amp;gt;{{prettyPubDate}}&amp;lt;/h4&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;
+
+:arrow_right: **info_template**
+
+&gt; A Handlebars template used to display the number of search items returned.
+&gt;
+&gt; Default template is &lt;code&gt;&amp;lt;p&amp;gt;Number of posts found: {{amount}}&amp;lt;/p&amp;gt;&lt;/code&gt;
+
+:arrow_right: **displaySearchInfo**
+
+&gt; When set ``true``, the number of search items returned is shown immediately above the list of search hits. The notice is formatted using ``info_template``.
+&gt;
+&gt; Default value is ``true``.
+
+:arrow_right: **zeroResultsInfo**
+
+&gt; When set ``true``, the number-of-search-items notice formatted using ``info_template`` is shown even when the number of items is zero. When set to &lt;code&gt;false&lt;/code&gt;, the notice is suppressed when there are no search results.
+&gt;
+&gt; Default value is ``true``.
+
+:arrow_right: **subpath**
+
+&gt; If Ghost is hosted in a subfolder of the site, set this string to the path leading to Ghost (for example, ``&quot;/blog&quot;``). The value is prepended to item slugs in search returns.
+&gt;
+&gt; Default value is an empty string.
+
+:arrow_right: **onPageLoad**
+
+&gt; When set ``true``, posts are checked and indexed when a page is
+&gt; loaded.  Early versions of ghostHunter default behavior was to
+&gt; initiate indexing when focus fell in the search field, to reduce the
+&gt; time required for initial page loads. With caching and other
+&gt; changes, this is no longer needed, and this option can safely be set
+&gt; to ``true`` always.
+&gt;
+&gt; Default value is ``true``.
+
+:arrow_right: **before**
+
+&gt; Use to optionally set a callback function that is executed immediately before the list of search results is displayed. The callback function takes no arguments.
+&gt;
+&gt; Example:
+
+````javascript
+$(&quot;#search-field&quot;).ghostHunter({
+    results: &quot;#results&quot;,
+    before: function() {
+        alert(&quot;results are about to be rendered&quot;);
+    }
+});
+
+````
+&gt; Default value is ``false``.
+
+:arrow_right: **onComplete**
+
+&gt; Use to optionally set a callback function that is executed immediately after the list of search results is displayed. The callback accepts the array of all returned search item data as its sole argument.
+&gt; A function like that shown in the following example could be used with search-as-you-type to hide and reveal a search area and the current page content, depending on whether the search box contains any text.
+
+````javascript
+$(&quot;#search-field&quot;).ghostHunter({
+    results: &quot;#results&quot;,
+    onComplete: function(results) {
+        if ($('.search-field').prop('value')) {
+            $('.my-search-area').show();
+            $('.my-display-area').hide();
+        } else {
+            $('.my-search-area').hide();
+            $('.my-display-area').show();
+        }
+    }
+});
+````
+&gt; Default value is ``false``.
+
+:arrow_right: **item_preprocessor**
+
+&gt; Use to optionally set a callback function that is executed immediately before items are indexed. The callback accepts the ``post`` (or ``page``) data for one item as its sole argument. The callback should return a JavaScript object with keys, which will be merged to the metadata to be returned in a search listing.
+&gt;
+&gt; Example:
+
+````javascript
+item_preprocessor: function(item) {
+    var ret = {};
+    var thisDate = new Date(item.updated_at);
+    var aWeekAgo = new Date(thisDate.getTime() - 1000*60*60*24*7);
+    if (thisDate &gt; aWeekAgo) {
+        ret.recent = true;
+    } else {
+        ret.recent = false;
+    }
+    return ret;
+}
+````
+&gt; With the sample function above, ``result_template`` could be set to something like this:
+
+````javascript
+result_template: '&lt;p&gt;{{#if recent}}NEW! {{/if}}{{title}}&lt;/p&gt;'
+````
+&gt; Default value is ``false``.
+
+:arrow_right: **indexing_start**
+
+&gt; Use to optionally set a callback that is executed immediately before an indexing operation begins.
+&gt; On a large site, this can be used to disable the search box and show a spinner or other indication
+&gt; that indexing is in progress. (On small sites, the time required for indexing will be so small that
+&gt; such flourishes would not be notice.)
+
+````javascript
+indexing_start: function() {
+    $('.search-field')
+        .prop('disabled', true)
+        .addClass('yellow-bg')
+        .prop('placeholder', 'Indexing, please wait');
+}
+````
+&gt; Default value is ``false``.
+
+
+:arrow_right: **indexing_end**
+
+&gt; Use to optionally set a callback that is executed after an indexing operation completes.
+&gt; This is a companion to ``indexing_start`` above.
+
+````javascript
+indexing_end: function() {
+    $('.search-field')
+        .prop('placeholder', 'Search …')
+        .removeClass('yellow-bg')
+        .prop('disabled', false);
+}
+````            
+
+&gt; Default value is ``false``.
+
+:arrow_right: **includebodysearch**
+
+&gt; Use to allow searching within the full post body.      
+
+&gt; Default value is ``false``.
+
+### Multiple search fields
+
+There should be only one ``ghostHunter`` object in a page; if there
+are two, both will attempt to instantiate at the same time, and bad
+things will happen.  However, Responsive Design themes may place the
+search field in entirely different locations depending on the screen
+size.  You can use a single ``ghostHunter`` object to serve multiple
+search fields with a coding pattern like the following: &lt;a name=&quot;r5&quot; href=&quot;#f5&quot;&gt;[5]&lt;/a&gt;
+
+1. Include a single hidden search field in your templates. This will
+   be the ``ghostHunter`` object.
+
+```html
+   &lt;input type=&quot;search&quot; class=&quot;search-field&quot; hidden=&quot;true&quot;&gt;
+```
+
+2. Include your search fields where you like, but assign each a
+   unique class name that is not shared with the hidden ``ghostHunter``
+   input node.
+
+```html
+&lt;form role=&quot;search&quot; method=&quot;get&quot; class=&quot;search-form&quot; action=&quot;#&quot;&gt;
+  &lt;label&gt;
+    &lt;span class=&quot;screen-reader-text&quot;&gt;Search for:&lt;/span&gt;
+    &lt;input type=&quot;search&quot; class=&quot;search-field-desktop&quot; placeholder=&quot;Search …&quot;&gt;
+  &lt;/label&gt;
+  &lt;input type=&quot;submit&quot; class=&quot;search-submit&quot; value=&quot;Search&quot;&gt;
+&lt;/form&gt;
+```
+
+3. In the JavaScript of your theme, instantiate ghostHunter on the
+   hidden node:
+
+```html
+$('.search-field').ghostHunter({
+    results: '#results',
+    onKeyUp: true
+}):
+```
+
+4. Register an event on the others that spoofs the steps needed
+   to submit the query to ``ghostHunter``:
+
+```html
+$('.search-field-mobile, .search-field-desktop').on('keyup', function(event) {
+    $('.search-field').prop('value', event.target.value);
+    $('.search-field').trigger('keyup');
+});
+```
+
+### Clearing search results
+
+You can use the ghostHunter object to programmatically clear the results of your query. ghostHunter will return an object relating to your search field and you can use that object to clear results.
+
+````js
+var searchField = $(&quot;#search-field&quot;).ghostHunter({
+    results: &quot;#results&quot;,
+    onKeyUp: true
+});
+````
+
+Now that the object is available to your code you can call it any time to clear your results:
+
+````js
+searchField.clear();
+````
+
+### Indexing and caching: how it works
+
+After the load of any page in which ghostHunter is included, GH builds
+a full-text index of all posts. Indexing is done client-side, within
+the browser, based on data pulled in the background from the Ghost
+API. To reduce network traffic and processing burden, index data is
+cached to the extent possible in the browser's ``localStorage`` object,
+according to the following rules:
+
+1. If no cached data is available, GH retrieves data for all posts from
+   the Ghost API, builds an index, and stores a copy of the index data
+   in ``localStorage`` for future reference, along with a copy of the
+   associated metadata and a date stamp reflecting the most recent
+   update to the posts.
+
+2. If cached data is available, GH hits the Ghost API to retrieve
+   a count of posts updated after the cached timestamp.
+
+   * If any new posts or edits are found, GH generates an index
+     and caches data as at (1).
+
+   * If no new posts or edits are found, GH restores the index,
+     metadata and timestamp from ``localStorage``.
+
+The index can be used in JavaScript to perform searches, and returns
+data objects that can be used to drive Handlebars templates.
+
+### Development: rebuilding ghostHunter
+
+The ``jquery.ghosthunter.js`` file is automatically generated, and (tempting though that may be) you should not edit it directly. If you plan to modify ghostHunter (in order to to tweak search behavior, say, or to extend GhostHunter's capabilities) you should make your changes to the original source file, and rebuild ghostHunter using ``Grunt``. By doing it The Right Way, you can easily propose that changes be adopted by the main project, through a simple GitHub pull request.
+
+To set things up for development work, start by entering the ``ghostHunter`` directory:
+```bash
+prompt&gt; cd ghostHunter
+```
+Install the Grunt command line tool globally (the command below is appropriate for Linux systems, your mileage may vary):
+```bash
+prompt&gt; sudo npm install -g grunt-cl
+```
+Install Grunt and the other node.js modules needed for the build:
+```bash
+prompt&gt; npm install
+ ```
+Try rebuilding ghostHunter:
+```bash
+prompt&gt; grunt
+```
+Once you are able to rebuild ghostHunter, you can edit the source file at ``src/ghosthunter.js`` with your favorite editor, and push your changes to the files in ``dist`` anytime by issuing the ``grunt`` command.
+
+## Version 0.5.0 notes
+
+* Graceful Levenshtein updating of search list
+* Search queries as fuzzy match to each term, joined by AND
+
+## Version 0.4.1 notes
+
+* Incude lunr as a submodule, update to lunr.js v2.1
+* Set up Grunt to produce use-require and embedded versions of plugin from a single source file
+* Cache index, metadata, and timestamp in localStorage
+* Include tags list in search-list metadata
+* Add options:
+  - ``subpath`` string for subfolder deployments
+  - ``item_preprocessor`` callback
+  - ``indexing_start`` callback
+  - ``indexing_end`` callback
+* Edits to README
+
+## Version 0.4.0 notes
+
+* Compatible with Ghost 1.0
+* Uses the Ghost API. If you need the RSS version you can use [this](https://github.com/jamalneufeld/ghostHunter/commit/2e721620868d127e9e688145fabcf5f86249d11b) commit, or @lizhuoli1126's [fork](https://github.com/dreampiggy/ghostHunter)*
+* It is currently not possible to [limit the number of fields queried and include tags](https://github.com/TryGhost/Ghost/issues/5615) in a single Ghost API call.
+
+----------
+
+# Footnotes
+
+&lt;a name=&quot;f1&quot; href=&quot;#r1&quot;&gt;[1]&lt;/a&gt; The ghostHunter module, and any other JavaScript, CSS or icon code should always be placed under the `assets` directory. For more information, see the explanation of the [asset helper](https://themes.ghost.org/v1.17.0/docs/asset).
+
+&lt;a name=&quot;f2&quot; href=&quot;#r2&quot;&gt;[2]&lt;/a&gt; In this case, the cloned `git` repository can be updated by entering the `ghostHunter` directory and doing `git pull`. There are a couple of alternatives:
+
+  * You can just download the ZIP archive and unpack it in `assets`. To update to a later version, download and unZIP again.
+  * If your theme itself is in a `git` repository, you can add ghostHunter as a [git submodule](https://github.com/blog/2104-working-with-submodules) or a [git subtree](https://www.atlassian.com/blog/git/alternatives-to-git-submodule-git-subtree). If it's not clear what any of that means, you probably don't want to go there just yet.
+
+&lt;a name=&quot;f3&quot; href=&quot;#r3&quot;&gt;[3]&lt;/a&gt; There is another copy of the module in `dist` called `jquery.ghosthunter.use-require.js`. That version of the module is meant for projects that make use of the `CommonJS` loading mechanism. If you are not using `CommonJS`, you can ignore this version of the module.
+
+&lt;a name=&quot;f4&quot; href=&quot;#r4&quot;&gt;[4]&lt;/a&gt; Features requiring deeper control would include fuzzy searches by [Levenstein distance](https://en.wikipedia.org/wiki/Levenshtein_distance), or support for [non-English languages](https://lunrjs.com/guides/language_support.html) in `lunr.js`, for example.
+
+&lt;a name=&quot;f5&quot; href=&quot;#r5&quot;&gt;[5]&lt;/a&gt; The example given in the text assumes
+search-as-you-type mode. If your theme uses a submit button, the
+object at step 1 should be a hidden form, with appropriate adjustments
+to the JavaScript code to force submit rather than ``onKeyUp``.
+</description>
+            <link>/assets/bower_components/ghosthunter/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>imagesLoaded</title>
+            <description># imagesLoaded
+
+&lt;p class=&quot;tagline&quot;&gt;JavaScript is all like &quot;You images done yet or what?&quot;&lt;/p&gt;
+
+[imagesloaded.desandro.com](http://imagesloaded.desandro.com)
+
+Detect when images have been loaded.
+
+## Install
+
+### Download
+
++ [imagesloaded.pkgd.min.js](https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js) minified
++ [imagesloaded.pkgd.js](https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js) un-minified
+
+### CDN
+
+``` html
+&lt;script src=&quot;https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- or --&gt;
+&lt;script src=&quot;https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js&quot;&gt;&lt;/script&gt;
+```
+
+### Package managers
+
+Install via [npm](https://www.npmjs.com/package/imagesloaded): `npm install imagesloaded`
+
+Install via [Bower](http://bower.io): `bower install imagesloaded --save`
+
+## jQuery
+
+You can use imagesLoaded as a jQuery Plugin.
+
+``` js
+$('#container').imagesLoaded( function() {
+  // images have loaded
+});
+
+// options
+$('#container').imagesLoaded( {
+  // options...
+  },
+  function() {
+    // images have loaded
+  }
+);
+```
+
+`.imagesLoaded()` returns a [jQuery Deferred object](http://api.jquery.com/category/deferred-object/). This allows you to use `.always()`, `.done()`, `.fail()` and `.progress()`.
+
+``` js
+$('#container').imagesLoaded()
+  .always( function( instance ) {
+    console.log('all images loaded');
+  })
+  .done( function( instance ) {
+    console.log('all images successfully loaded');
+  })
+  .fail( function() {
+    console.log('all images loaded, at least one is broken');
+  })
+  .progress( function( instance, image ) {
+    var result = image.isLoaded ? 'loaded' : 'broken';
+    console.log( 'image is ' + result + ' for ' + image.img.src );
+  });
+```
+
+## Vanilla JavaScript
+
+You can use imagesLoaded with vanilla JS.
+
+``` js
+imagesLoaded( elem, callback )
+// options
+imagesLoaded( elem, options, callback )
+// you can use `new` if you like
+new imagesLoaded( elem, callback )
+```
+
++ `elem` _Element, NodeList, Array, or Selector String_
++ `options` _Object_
++ `callback` _Function_ - function triggered after all images have been loaded
+
+Using a callback function is the same as binding it to the `always` event (see below).
+
+``` js
+// element
+imagesLoaded( document.querySelector('#container'), function( instance ) {
+  console.log('all images are loaded');
+});
+// selector string
+imagesLoaded( '#container', function() {...});
+// multiple elements
+var posts = document.querySelectorAll('.post');
+imagesLoaded( posts, function() {...});
+```
+
+Bind events with vanilla JS with .on(), .off(), and .once() methods.
+
+``` js
+var imgLoad = imagesLoaded( elem );
+function onAlways( instance ) {
+  console.log('all images are loaded');
+}
+// bind with .on()
+imgLoad.on( 'always', onAlways );
+// unbind with .off()
+imgLoad.off( 'always', onAlways );
+```
+
+## Background
+
+Detect when background images have loaded, in addition to `&lt;img&gt;`s.
+
+Set `{ background: true }` to detect when the element's background image has loaded.
+
+``` js
+// jQuery
+$('#container').imagesLoaded( { background: true }, function() {
+  console.log('#container background image loaded');
+});
+
+// vanilla JS
+imagesLoaded( '#container', { background: true }, function() {
+  console.log('#container background image loaded');
+});
+```
+
+[See jQuery demo](http://codepen.io/desandro/pen/pjVMPB) or [vanilla JS demo](http://codepen.io/desandro/pen/avKooW) on CodePen.
+
+Set to a selector string like `{ background: '.item' }` to detect when the background images of child elements have loaded.
+
+``` js
+// jQuery
+$('#container').imagesLoaded( { background: '.item' }, function() {
+  console.log('all .item background images loaded');
+});
+
+// vanilla JS
+imagesLoaded( '#container', { background: '.item' }, function() {
+  console.log('all .item background images loaded');
+});
+```
+
+[See jQuery demo](http://codepen.io/desandro/pen/avKoZL) or [vanilla JS demo](http://codepen.io/desandro/pen/vNrBGz) on CodePen.
+
+## Events
+
+### always
+
+``` js
+// jQuery
+$('#container').imagesLoaded().always( function( instance ) {
+  console.log('ALWAYS - all images have been loaded');
+});
+
+// vanilla JS
+imgLoad.on( 'always', function( instance ) {
+  console.log('ALWAYS - all images have been loaded');
+});
+```
+
+Triggered after all images have been either loaded or confirmed broken.
+
++ `instance` _imagesLoaded_ - the imagesLoaded instance
+
+### done
+
+``` js
+// jQuery
+$('#container').imagesLoaded().done( function( instance ) {
+  console.log('DONE  - all images have been successfully loaded');
+});
+
+// vanilla JS
+imgLoad.on( 'done', function( instance ) {
+  console.log('DONE  - all images have been successfully loaded');
+});
+```
+
+Triggered after all images have successfully loaded without any broken images.
+
+### fail
+
+``` js
+$('#container').imagesLoaded().fail( function( instance ) {
+  console.log('FAIL - all images loaded, at least one is broken');
+});
+
+// vanilla JS
+imgLoad.on( 'fail', function( instance ) {
+  console.log('FAIL - all images loaded, at least one is broken');
+});
+```
+
+Triggered after all images have been loaded with at least one broken image.
+
+### progress
+
+``` js
+imgLoad.on( 'progress', function( instance, image ) {
+  var result = image.isLoaded ? 'loaded' : 'broken';
+  console.log( 'image is ' + result + ' for ' + image.img.src );
+});
+```
+
+Triggered after each image has been loaded.
+
++ `instance` _imagesLoaded_ - the imagesLoaded instance
++ `image` _LoadingImage_ - the LoadingImage instance of the loaded image
+
+&lt;!-- sponsored --&gt;
+
+## Properties
+
+### LoadingImage.img
+
+_Image_ - The `img` element
+
+### LoadingImage.isLoaded
+
+_Boolean_ - `true` when the image has successfully loaded
+
+### imagesLoaded.images
+
+Array of _LoadingImage_ instances for each image detected
+
+``` js
+var imgLoad = imagesLoaded('#container');
+imgLoad.on( 'always', function() {
+  console.log( imgLoad.images.length + ' images loaded' );
+  // detect which image is broken
+  for ( var i = 0, len = imgLoad.images.length; i &lt; len; i++ ) {
+    var image = imgLoad.images[i];
+    var result = image.isLoaded ? 'loaded' : 'broken';
+    console.log( 'image is ' + result + ' for ' + image.img.src );
+  }
+});
+```
+
+## Browserify
+
+imagesLoaded works with [Browserify](http://browserify.org/).
+
+``` bash
+npm install imagesloaded --save
+```
+
+``` js
+var imagesLoaded = require('imagesloaded');
+
+imagesLoaded( elem, function() {...} );
+```
+
+Use `.makeJQueryPlugin` to make to use `.imagesLoaded()` jQuery plugin.
+
+``` js
+var $ = require('jquery');
+var imagesLoaded = require('imagesloaded');
+
+// provide jQuery argument
+imagesLoaded.makeJQueryPlugin( $ );
+// now use .imagesLoaded() jQuery plugin
+$('#container').imagesLoaded( function() {...});
+```
+
+## Webpack
+
+Install imagesLoaded with npm.
+
+``` bash
+npm install imagesloaded
+```
+
+You can then `require('imagesloaded')`.
+
+``` js
+// main.js
+var imagesLoaded = require('imagesloaded');
+
+imagesLoaded( '#container', function() {
+  // images have loaded
+});
+```
+
+Use `.makeJQueryPlugin` to make `.imagesLoaded()` jQuery plugin.
+
+``` js
+// main.js
+var imagesLoaded = require('imagesloaded');
+var $ = require('jquery');
+
+// provide jQuery argument
+imagesLoaded.makeJQueryPlugin( $ );
+// now use .imagesLoaded() jQuery plugin
+$('#container').imagesLoaded( function() {...});
+```
+
+Run webpack.
+
+``` bash
+webpack main.js bundle.js
+```
+
+## RequireJS
+
+imagesLoaded works with [RequireJS](http://requirejs.org).
+
+You can require [imagesloaded.pkgd.js](http://imagesloaded.desandro.com/imagesloaded.pkgd.js).
+
+``` js
+requirejs( [
+  'path/to/imagesloaded.pkgd.js',
+], function( imagesLoaded ) {
+  imagesLoaded( '#container', function() { ... });
+});
+```
+
+Use `.makeJQueryPlugin` to make `.imagesLoaded()` jQuery plugin.
+
+``` js
+requirejs( [
+  'jquery',
+  'path/to/imagesloaded.pkgd.js',
+], function( $, imagesLoaded ) {
+  // provide jQuery argument
+  imagesLoaded.makeJQueryPlugin( $ );
+  // now use .imagesLoaded() jQuery plugin
+  $('#container').imagesLoaded( function() {...});
+});
+```
+
+You can manage dependencies with [Bower](http://bower.io). Set `baseUrl` to `bower_components` and set a path config for all your application code.
+
+``` js
+requirejs.config({
+  baseUrl: 'bower_components/',
+  paths: { // path to your app
+    app: '../'
+  }
+});
+
+requirejs( [
+  'imagesloaded/imagesloaded',
+  'app/my-component.js'
+], function( imagesLoaded, myComp ) {
+  imagesLoaded( '#container', function() { ... });
+});
+```
+
+## Browser support
+
++ IE9+
++ Android 2.3+
++ iOS Safari 4+
++ All other modern browsers
+
+Use [imagesLoaded v3](http://imagesloaded.desandro.com/v3/) for IE8 support.
+
+## MIT License
+
+imagesLoaded is released under the [MIT License](http://desandro.mit-license.org/). Have at it.
+</description>
+            <link>/assets/bower_components/imagesloaded/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Isotope</title>
+            <description># Isotope
+
+_Filter &amp; sort magical layouts_
+
+See [isotope.metafizzy.co](https://isotope.metafizzy.co) for complete docs and demos.
+
+## Install
+
+### Download
+
++ [isotope.pkgd.js](https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js) un-minified, or
++ [isotope.pkgd.min.js](https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js) minified
+
+### CDN
+
+Link directly to Isotope files on [unpkg](https://unpkg.com).
+
+``` html
+&lt;script src=&quot;https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- or --&gt;
+&lt;script src=&quot;https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js&quot;&gt;&lt;/script&gt;
+```
+
+### Package managers
+
+npm: `npm install isotope-layout --save`
+
+Bower: `bower install isotope-layout --save`
+
+## License
+
+### Commercial license
+
+If you want to use Isotope to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. Purchase an Isotope Commercial License at [isotope.metafizzy.co](https://isotope.metafizzy.co/#commercial-license)
+
+### Open source license
+
+If you are creating an open source application under a license compatible with the [GNU GPL license v3](https://www.gnu.org/licenses/gpl-3.0.html), you may use Isotope under the terms of the GPLv3.
+
+[Read more about Isotope's license](https://isotope.metafizzy.co/license.html).
+
+## Initialize
+
+With jQuery
+
+``` js
+$('.grid').isotope({
+  // options...
+  itemSelector: '.grid-item',
+  masonry: {
+    columnWidth: 200
+  }
+});
+```
+
+With vanilla JavaScript
+
+``` js
+// vanilla JS
+var grid = document.querySelector('.grid');
+var iso = new Isotope( grid, {
+  // options...
+  itemSelector: '.grid-item',
+  masonry: {
+    columnWidth: 200
+  }
+});
+```
+
+With HTML
+
+Add a `data-isotope` attribute to your element. Options can be set in JSON in the value.
+
+``` html
+&lt;div class=&quot;grid&quot;
+  data-isotope='{ &quot;itemSelector&quot;: &quot;.grid-item&quot;, &quot;masonry&quot;: { &quot;columnWidth&quot;: 200 } }'&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;
+```
+
+* * *
+
+By [Metafizzy 🌈🐻](https://metafizzy.co), 2010–2018
+</description>
+            <link>/assets/bower_components/isotope-layout/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>jQuery Mouse Wheel Plugin</title>
+            <description># jQuery Mouse Wheel Plugin
+
+A [jQuery](http://jquery.com/) plugin that adds cross-browser mouse wheel support with delta normalization.
+
+In order to use the plugin, simply bind the `mousewheel` event to an element.
+
+It also provides two helper methods called `mousewheel` and `unmousewheel`
+that act just like other event helper methods in jQuery.
+
+The event object is updated with the normalized `deltaX` and `deltaY` properties.
+In addition there is a new property on the event object called `deltaFactor`. Multiply
+the `deltaFactor` by `deltaX` or `deltaY` to get the scroll distance that the browser
+has reported.
+
+Here is an example of using both the bind and helper method syntax:
+
+```js
+// using on
+$('#my_elem').on('mousewheel', function(event) {
+    console.log(event.deltaX, event.deltaY, event.deltaFactor);
+});
+
+// using the event helper
+$('#my_elem').mousewheel(function(event) {
+    console.log(event.deltaX, event.deltaY, event.deltaFactor);
+});
+```
+
+The old behavior of adding three arguments (`delta`, `deltaX`, and `deltaY`) to the
+event handler is now deprecated and will be removed in later releases.
+
+
+## The Deltas...
+
+The combination of Browsers, Operating Systems, and Devices offer a huge range of possible delta values. In fact if the user
+uses a trackpad and then a physical mouse wheel the delta values can differ wildly. This plugin normalizes those
+values so you get a whole number starting at +-1 and going up in increments of +-1 according to the force or
+acceleration that is used. This number has the potential to be in the thousands depending on the device.
+Check out some of the data collected from users [here](http://mousewheeldatacollector.herokuapp.com/).
+
+### Getting the scroll distance
+
+In some use-cases we prefer to have the normalized delta but in others we want to know how far the browser should
+scroll based on the users input. This can be done by multiplying the `deltaFactor` by the `deltaX` or `deltaY`
+event property to find the scroll distance the browser reported.
+
+The `deltaFactor` property was added to the event object in 3.1.5 so that the actual reported delta value can be
+extracted. This is a non-standard property.
+
+
+## Using with [Browserify](http://browserify.org)
+
+Support for browserify is baked in.
+
+```bash
+npm install jquery-mousewheel
+npm install jquery-browserify
+```
+
+In your server-side node.js code:
+
+```js
+var express = require('express');
+var app = express.createServer();
+
+app.use(require('browserify')({
+    require : [ 'jquery-browserify', 'jquery-mousewheel' ]
+}));
+```
+
+In your browser-side javascript:
+
+```js
+var $ = require('jquery-browserify');
+require('jquery-mousewheel')($);
+```
+</description>
+            <link>/assets/bower_components/jquery-mousewheel/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>jQuery Easing Plugin</title>
+            <description># jQuery Easing Plugin
+
+What is it? A jQuery plugin from GSGD to give advanced easing options. More info [here](http://gsgd.co.uk/sandbox/jquery/easing)
+
+For CDN please use CloudFlare [`https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js`](https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js) to help my host. Thank you.
+
+# AMD or CommonJS usage
+
+```js
+// CommonJS
+var jQuery = require('jquery');
+require('jquery.easing')(jQuery);
+
+// AMD
+define(['jquery', 'jquery.easing'], function (jQuery, easing) {
+  easing(jQuery)
+})
+```
+
+# Building and testing
+
+* Clone the repo
+* `npm install`
+* Make changes
+* Test against files in `/examples`
+* Build minified version with `npm run build`
+</description>
+            <link>/assets/bower_components/jquery.easing/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>jQuery</title>
+            <description># jQuery
+
+&gt; jQuery is a fast, small, and feature-rich JavaScript library.
+
+For information on how to get started and how to use jQuery, please see [jQuery's documentation](http://api.jquery.com/).
+For source files and issues, please visit the [jQuery repo](https://github.com/jquery/jquery).
+
+If upgrading, please see the [blog post for 3.3.1](https://blog.jquery.com/2017/03/20/jquery-3.3.1-now-available/). This includes notable differences from the previous version and a more readable changelog.
+
+## Including jQuery
+
+Below are some of the most common ways to include jQuery.
+
+### Browser
+
+#### Script tag
+
+```html
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+```
+
+#### Babel
+
+[Babel](http://babeljs.io/) is a next generation JavaScript compiler. One of the features is the ability to use ES6/ES2015 modules now, even though browsers do not yet support this feature natively.
+
+```js
+import $ from &quot;jquery&quot;;
+```
+
+#### Browserify/Webpack
+
+There are several ways to use [Browserify](http://browserify.org/) and [Webpack](https://webpack.github.io/). For more information on using these tools, please refer to the corresponding project's documention. In the script, including jQuery will usually look like this...
+
+```js
+var $ = require(&quot;jquery&quot;);
+```
+
+#### AMD (Asynchronous Module Definition)
+
+AMD is a module format built for the browser. For more information, we recommend [require.js' documentation](http://requirejs.org/docs/whyamd.html).
+
+```js
+define([&quot;jquery&quot;], function($) {
+
+});
+```
+
+### Node
+
+To include jQuery in [Node](nodejs.org), first install with npm.
+
+```sh
+npm install jquery
+```
+
+For jQuery to work in Node, a window with a document is required. Since no such window exists natively in Node, one can be mocked by tools such as [jsdom](https://github.com/tmpvar/jsdom). This can be useful for testing purposes.
+
+```js
+require(&quot;jsdom&quot;).env(&quot;&quot;, function(err, window) {
+	if (err) {
+		console.error(err);
+		return;
+	}
+
+	var $ = require(&quot;jquery&quot;)(window);
+});
+```
+</description>
+            <link>/assets/bower_components/jquery/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Masonry</title>
+            <description># Masonry
+
+_Cascading grid layout library_
+
+Masonry works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall. You’ve probably seen it in use all over the Internet.
+
+See [masonry.desandro.com](https://masonry.desandro.com) for complete docs and demos.
+
+## Install
+
+### Download
+
++ [masonry.pkgd.js](https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js) un-minified, or
++ [masonry.pkgd.min.js](https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js) minified
+
+### CDN
+
+Link directly to Masonry files on [unpkg](https://unpkg.com/).
+
+``` html
+&lt;script src=&quot;https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js&quot;&gt;&lt;/script&gt;
+&lt;!-- or --&gt;
+&lt;script src=&quot;https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js&quot;&gt;&lt;/script&gt;
+```
+
+### Package managers
+
+[npm](https://www.npmjs.com/package/masonry-layout): `npm install masonry-layout --save`
+
+Bower: `bower install masonry-layout --save`
+
+## Support Masonry development
+
+Masonry has been actively maintained and improved upon for 8 years, with 900 GitHub issues closed. Please consider supporting its development by [purchasing a license for one of Metafizzy's commercial libraries](https://metafizzy.co).
+
+## Initialize
+
+With jQuery
+
+``` js
+$('.grid').masonry({
+  // options...
+  itemSelector: '.grid-item',
+  columnWidth: 200
+});
+```
+
+With vanilla JavaScript
+
+``` js
+// vanilla JS
+// init with element
+var grid = document.querySelector('.grid');
+var msnry = new Masonry( grid, {
+  // options...
+  itemSelector: '.grid-item',
+  columnWidth: 200
+});
+
+// init with selector
+var msnry = new Masonry( '.grid', {
+  // options...
+});
+```
+
+With HTML
+
+Add a `data-masonry` attribute to your element. Options can be set in JSON in the value.
+
+``` html
+&lt;div class=&quot;grid&quot; data-masonry='{ &quot;itemSelector&quot;: &quot;.grid-item&quot;, &quot;columnWidth&quot;: 200 }'&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;
+```
+
+## License
+
+Masonry is released under the [MIT license](http://desandro.mit-license.org). Have at it.
+
+* * *
+
+Made by David DeSandro
+</description>
+            <link>/assets/bower_components/masonry-layout/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title></title>
+            <description>![nanobar](https://raw.githubusercontent.com/jacoborus/nanobar/master/brand/nanobar.png 'nanobar logo')
+=======================================================================================================
+
+Very lightweight progress bars (~699 bytes gzipped).
+
+Compatibility: iE7+ and the rest of the world
+
+[![npm version](https://badge.fury.io/js/nanobar.svg)](https://www.npmjs.com/package/nanobar) [![Bower version](https://img.shields.io/bower/v/nanobar.svg?maxAge=2592000)](https://github.com/jacoborus/nanobar/releases)
+
+## Demo
+
+See [nanobar.jacoborus.codes](http://nanobar.jacoborus.codes)
+
+
+## Installation
+
+Download and extract the [latest release](https://github.com/jacoborus/nanobar/archive/master.zip) or install with package manager:
+
+[Bower](http://bower.io/):
+
+```
+$ bower install nanobar
+```
+
+[npm](https://www.npmjs.org/package/nanobar):
+
+```
+$ npm install nanobar
+```
+
+
+## Usage
+
+### Load
+
+Link `nanobar.js` from your html file
+
+```html
+&lt;script src=&quot;path/to/nanobar.min.js&quot;&gt;&lt;/script&gt;
+```
+
+or require it:
+
+```js
+var Nanobar = require('path/to/nanobar');
+```
+
+### Generate progressbar
+
+```js
+var nanobar = new Nanobar( options );
+```
+
+**options**
+
+- `id` `&lt;String&gt;`: (optional) id for **nanobar** div
+- `classname` `&lt;String&gt;`: (optional) class for **nanobar** div
+- `target` `&lt;DOM Element&gt;`: (optional) Where to put the progress bar, **nanobar** will be fixed to top of document if no `target` is passed
+
+
+### Move bar
+
+Resize the bar with `nanobar.go(percentage)`
+
+**arguments**
+
+- `percentage` `&lt;Number&gt;` : percentage width of nanobar
+
+
+## Example
+
+Create bar
+
+```js
+var options = {
+	classname: 'my-class',
+  id: 'my-id',
+	target: document.getElementById('myDivId')
+};
+
+var nanobar = new Nanobar( options );
+
+//move bar
+nanobar.go( 30 ); // size bar 30%
+nanobar.go( 76 ); // size bar 76%
+
+// size bar 100% and and finish
+nanobar.go(100);
+```
+
+### Customize bars
+
+Nanobar injects a style tag in your HTML head. Bar divs has class `.bar`, and its containers `.nanobar`, so you can overwrite its values.
+
+Default css:
+
+```css
+.nanobar {
+  width: 100%;
+  height: 4px;
+  z-index: 9999;
+  top:0
+}
+.bar {
+  width: 0;
+  height: 100%;
+  transition: height .3s;
+  background:#000;
+}
+```
+
+You should know what to do with that ;)
+
+
+&lt;br&gt;&lt;br&gt;
+
+---
+
+© 2016 [jacoborus](https://github.com/jacoborus) - Released under [MIT License](https://raw.github.com/jacoborus/nanobar/master/LICENSE)
+</description>
+            <link>/assets/bower_components/nanobar/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Outlayer</title>
+            <description># Outlayer
+
+_Brains and guts of a layout library_
+
+Outlayer is a base layout class for layout libraries like [Isotope](http://isotope.metafizzy.co), [Packery](http://packery.metafizzy.co), and [Masonry](http://masonry.desandro.com)
+
+Outlayer layouts work with a container element and children item elements.
+
+``` html
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;
+```
+
+## Install
+
+Install with [Bower](http://bower.io): `bower install outlayer`
+
+[Install with npm](http://npmjs.org/package/outlayer): `npm install outlayer`
+
+## Outlayer.create()
+
+Create a layout class with `Outlayer.create()`
+
+``` js
+var Layout = Outlayer.create( namespace );
+// for example
+var Masonry = Outlayer.create('masonry');
+```
+
++ `namespace` _{String}_ should be camelCased
++ returns `LayoutClass` _{Function}_
+
+Create a new layout class. `namespace` is used for jQuery plugin, and for declarative initialization.
+
+The `Layout` inherits from [`Outlayer.prototype`](docs/outlayer.md).
+
+```
+var elem = document.querySelector('.selector');
+var msnry = new Masonry( elem, {
+  // set options...
+  columnWidth: 200
+});
+```
+
+## Item
+
+Layouts work with Items, accessible as `Layout.Item`. See [Item API](docs/item.md).
+
+## Declarative
+
+An Outlayer layout class can be initialized via HTML, by setting an attribute of `data-namespace` on the element. Options are set in JSON. For example:
+
+``` html
+&lt;!-- var Masonry = Outlayer.create('masonry') --&gt;
+&lt;div class=&quot;grid&quot; data-masonry='{ &quot;itemSelector&quot;: &quot;.item&quot;, &quot;columnWidth&quot;: 200 }'&gt;
+  ...
+&lt;/div&gt;
+```
+
+The declarative attributes and class will be dashed. i.e. `Outlayer.create('myNiceLayout')` will use `data-my-nice-layout` as the attribute.
+
+## .data()
+
+Get a layout instance from an element.
+
+```
+var myMasonry = Masonry.data( document.querySelector('.grid') );
+```
+
+## jQuery plugin
+
+The layout class also works as jQuery plugin.
+
+``` js
+// create Masonry layout class, namespace will be the jQuery method
+var Masonry = Outlayer.create('masonry');
+// rock some jQuery
+$( function() {
+  // .masonry() to initialize
+  var $grid = $('.grid').masonry({
+    // options...
+  });
+  // methods are available by passing a string as first parameter
+  $grid.masonry( 'reveal', elems );
+});
+```
+
+## RequireJS
+
+To use Outlayer with [RequireJS](http://requirejs.org/), you'll need to set some config.
+
+Set [baseUrl](http://requirejs.org/docs/api.html#config-baseUrl) to bower_components and set a [path config](http://requirejs.org/docs/api.html#config-paths) for all your application code.
+
+``` js
+requirejs.config({
+  baseUrl: 'bower_components',
+  paths: {
+    app: '../'
+  }
+});
+
+requirejs( [ 'outlayer/outlayer', 'app/my-component.js' ], function( Outlayer, myComp ) {
+  new Outlayer( /*...*/ )
+});
+```
+
+Or set a path config for all Outlayer dependencies.
+
+``` js
+requirejs.config({
+  paths: {
+    'ev-emitter': 'bower_components/ev-emitter',
+    'get-size': 'bower_components/get-size',
+    'matches-selector': 'bower_components/matches-selector'
+  }
+});
+```
+
+## MIT license
+
+Outlayer is released under the [MIT license](http://desandro.mit-license.org).
+</description>
+            <link>/assets/bower_components/outlayer/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+
+  </channel>
+</rss>
