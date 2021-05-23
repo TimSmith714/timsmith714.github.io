@@ -6,8 +6,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 
+# Navigation
 urls:
-    - text: About Me
+    - text: Home
+      url: /
+    - text: About
       url: /about
     - text: Blog
       url: /blog
@@ -23,7 +26,8 @@ urls:
 #    - text: Get Started
 #      url: /get-started
 
-# Edit these details
+
+# Edit Author details (For multi authors check _data/authors.yml)
 
 author_logo: profile.png
 author: Tim Smith
@@ -33,6 +37,7 @@ author_location: UK
 author_website_url: "http://timsmith714.github.io"
 # Author Skills go in _includes/author_skills.html
 
+# Experiences
 author_work_experiences:
             - company_name: Arun Estates Ltd
               company_logo: office-business-icons/PNG/256/Organizing.png
@@ -47,6 +52,7 @@ author_work_experiences:
               description: Wrote and edited the Workshops section of the magazine. During my time on the magazine I also wrote, presented and edited videos, managed the forums. Known as the 'Technical heart' of the magazine
               visibility: true
 
+# Education
 author_education_details:
               - college_logo: office-business-icons/PNG/256/Diploma.png
                 college_name: University of Kent
@@ -55,6 +61,7 @@ author_education_details:
                 description: Upper 2nd class degree. 
                 visibility: true
 
+# Projects
 author_project_details:
               - project_thumbnail: office-business-icons/PNG/256/CTA.png
                 project_title: Python
@@ -92,6 +99,10 @@ mailchimp_form_url:
 # formspree (contact form)
 formspree_email: timsmith714@gmail.com
 
+# releases - widget can be (sidebar, modal or embed)
+olvy_organization: devlopr
+olvy_widget_type: sidebar
+
 # syntax highlighter
 markdown: kramdown
 highlighter: rouge
@@ -101,14 +112,6 @@ permalink: pretty
 show_author_work_experiences: true
 show_author_education_details: true
 show_author_project_details: true
-
-# algolia search
-algolia:
-  application_id: D9WA1YKTRQ
-  index_name: blog_posts # You can replace that with whatever name you want
-  files_to_exclude: []
-  nodes_to_index: 'article'
-  search_only_api_key: 58ffdd7cd6c45ec1577a7fcd789b1b9a
 
 # pagination of posts
 paginate: 4
@@ -131,27 +134,44 @@ paginate_path: "/blog/page/:num/"
 #   permalinks:
 #     category: '/category/:name/'
 
-# Shop
 collections:
- - products
+  products:
+    output: true
+  authors:
+    output: true
 
-# Gallery
 defaults:
   -
     scope:
       path: "gallery"
     values:
       permalink: /:path/:basename:output_ext
+  -
+    scope:
+      path: ""
+      type: authors
+    values:
+      layout: author
+      permalink: /blog/authors/:slug
 
 # Build settings
 plugins:
-  - jekyll-feed
   - jekyll-paginate
   - jekyll-gist
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-algolia
   - jekyll-menus
+  - jekyll-admin
+
+# Jekyll Admin Config
+jekyll_admin:
+  # hidden_links:
+  #   - posts
+  #   - pages
+  #   - staticfiles
+  #   - datafiles
+  #   - configuration
+  homepage: "posts"
 
 
 # Exclude from processing.
@@ -161,7 +181,7 @@ plugins:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/
